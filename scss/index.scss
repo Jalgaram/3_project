@@ -3,7 +3,7 @@
 
 // MIXIN
 @mixin full-width{
-    width: 100%;
+    max-width: 1912px;
 }
 @mixin content-width{
     width: 1280px;
@@ -16,6 +16,7 @@
 .swiper-slideWrap{
     @include full-width;
     height: 600px;
+    @include margin-auto;
     background-color: lightcyan;
 }
 
@@ -23,6 +24,7 @@
 .index-ban{
     @include full-width;
     height: 152px;
+    @include margin-auto;
     background-color: lightgoldenrodyellow;
 }
 
@@ -30,6 +32,7 @@
 .new-book{
     @include full-width;
     height: 579px;
+    @include margin-auto;
     background-color: lightgray;
 }
 
@@ -37,6 +40,7 @@
 .best-book{
     @include full-width;
     height: 488px;
+    @include margin-auto;
     background-color: lightgreen;
 }
 
@@ -44,6 +48,7 @@
 .center-ban{
     @include full-width;
     height: 217px;
+    @include margin-auto;
     background-color: lightpink;
 }
 
@@ -51,6 +56,7 @@
 .hot-book{
     @include full-width;
     height: 903px;
+    @include margin-auto;
     background-color: lightsalmon;
 }
 
@@ -58,6 +64,7 @@
 .how-book{
     @include full-width;
     height: 3604px;
+    @include margin-auto;
     background-color: lightseagreen;
 }
 
@@ -65,6 +72,7 @@
 .your-book{
     @include full-width;
     height: 723px;
+    @include margin-auto;
     background-color: lightskyblue;
 }
 
@@ -72,6 +80,7 @@
 .project-ban{
     @include full-width;
     height: 427px;
+    @include margin-auto;
     background-color: lightyellow;
 }
 
@@ -79,10 +88,12 @@
 .notice1{
     @include full-width;
     height: 104px;
+    @include margin-auto;
     background-color: lavender;
 }
 .notice2{
     @include full-width;
     height: 184px;
+    @include margin-auto;
     background-color: plum;
 }
