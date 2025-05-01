@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import "common";
+
+// MIXIN
+@mixin full-width{
+    width: 100%;
+}
+@mixin content-width{
+    width: 1280px;
+}
+@mixin margin-auto{
+    margin: 0 auto;
+}
+
+// 슬라이드
+.swiper-slideWrap{
+    @include full-width;
+    height: 600px;
+    background-color: lightcyan;
+}
+
+// 인덱스 베너
+.index-ban{
+    @include full-width;
+    height: 152px;
+    background-color: lightgoldenrodyellow;
+}
+
+// 신착 도서
+.new-book{
+    @include full-width;
+    height: 579px;
+    background-color: lightgray;
+}
+
+// 베스트
+.best-book{
+    @include full-width;
+    height: 488px;
+    background-color: lightgreen;
+}
+
+// 중간 베너
+.center-ban{
+    @include full-width;
+    height: 217px;
+    background-color: lightpink;
+}
+
+// 화제의 책
+.hot-book{
+    @include full-width;
+    height: 903px;
+    background-color: lightsalmon;
+}
+
+// 이 책 어떰요?
+.how-book{
+    @include full-width;
+    height: 3604px;
+    background-color: lightseagreen;
+}
+
+// 타인의 책장
+.your-book{
+    @include full-width;
+    height: 723px;
+    background-color: lightskyblue;
+}
+
+// 프로젝트 베너
+.project-ban{
+    @include full-width;
+    height: 427px;
+    background-color: lightyellow;
+}
+
+// 공지사항
+.notice1{
+    @include full-width;
+    height: 104px;
+    background-color: lavender;
+}
+.notice2{
+    @include full-width;
+    height: 184px;
+    background-color: plum;
+}

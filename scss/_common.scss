@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR',Verdana,'Malgun Gothic','Sans-serif';
+}
+
+ul, ol {text-decoration: none;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+#wrap{
+    width: 1912px;
+    margin: 0 auto;
+}
+
+// MIXIN
+@mixin full-width{
+    width: 100%;
+}
+@mixin content-width{
+    width: 1280px;
+}
+@mixin box-width{
+    width: 1252px;
+}
+@mixin margin-auto{
+    margin: 0 auto;
+}
+
+// 헤더 + 메뉴바
+header{
+    @include full-width;
+    height: 170px;
+    background-color: beige;
+}
+
+.up-header{
+    @include content-width;
+    height: 100px;
+    @include margin-auto;
+    background-color: lightblue;
+}
+
+.main-menu{
+    @include full-width;
+    height: 70px;
+    @include margin-auto;
+    background-color: lightcoral;
+}
+
+// 푸터
+footer{
+    @include full-width;
+    height: 320px;
+    background-color: #012748;
+}
+
+.footerContent{
+    $boxheight: 190px;
+    $fontColor: #fff;
+
+    @include box-width;
+    height: 320px;
+    @include margin-auto;
+    display: flex;
+    align-items: center;
+
+    // 회사소개 등등
+    .footerBox1{
+        width: 788px;
+        height: $boxheight;
+        padding: 0 10% 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a, span, p{
+            color: $fontColor;
+        }
+
+        .footerNav > ul{
+            display: flex;
+
+            li{
+                margin-right: 10px;
+                text-align: center;
+            }
+
+            li:not(:last-child)::after{
+                content: "|";
+                margin-left: 10px;
+                color: $fontColor;
+                font-size: 13px;
+            }
+        }
+
+        .footerText1{
+            font-size: 14px;
+
+            span{
+               
+            }
+
+            span:not(:last-child)::after{
+                content: "|";
+                color: $fontColor;
+                font-size: 13px;
+                margin-left: 5px;
+            }
+        }
+        
+        .footerText2{
+            font-size: 11px;
+        }
+
+    }
+
+    // 고객센터
+    .footerBox2{
+        width: 262px;
+        height: $boxheight;
+
+        img[alt="인스타"]{
+            width: 22px;
+            height: 22px;
+            margin: 19px 0;
+        }
+
+        p, ul>li, a{color: $fontColor;}
+
+        p{
+            font-size: 16px;
+        }
+
+        a{
+            font-size: 23px;
+
+            margin: {
+                top: 5px;
+                bottom: 8px;
+            }
+
+            display: flex;
+            align-items: start;
+            gap: 8px;
+        }
+
+        li:last-child{
+            font-size: 14px;
+        }
+
+    }
+
+    // 커뮤니티
+    .footerBox3{
+        width: 200px;
+        height: $boxheight;
+        background-color: #333;
+
+        p, a{color: $fontColor;}
+    }
+}
