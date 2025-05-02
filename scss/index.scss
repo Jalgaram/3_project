@@ -11,6 +11,9 @@
 @mixin margin-auto{
     margin: 0 auto;
 }
+@mixin cursor-point{
+    cursor: pointer;
+}
 
 // 슬라이드
 .swiper-slideWrap{
@@ -24,8 +27,45 @@
 .index-ban{
     @include full-width;
     height: 152px;
-    @include margin-auto;
-    background-color: lightgoldenrodyellow;
+    @include margin-auto; 
+
+    div{
+        @include content-width;
+        height: 100%;
+        @include margin-auto;
+        display: flex;
+        align-items: center;
+
+        nav{
+            width: 100%;
+
+            ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+    
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    @include cursor-point();
+
+                    img{
+                        width: 78px;
+                        height: auto;
+                    }
+
+                    a{
+                        width: 78px;
+                        height: auto;
+                        background-color: #fafafa;
+                        border-radius: 50%;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // 신착 도서

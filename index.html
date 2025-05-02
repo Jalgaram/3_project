@@ -7,10 +7,7 @@
         
         <!-- 내 링크 -->
          <link rel="stylesheet" href="css/index.css">
-
-         <!-- 외부 링크 -->
-         <script src="https://kit.fontawesome.com/f94f0325ec.js" crossorigin="anonymous"></script>
-
+         
     </head>
 
     <body>
@@ -19,27 +16,74 @@
                 <div class="up-header">
                     <a href="index.html"><img src="img/logo.png" alt="인디펍"></a>
 
-                    <nav>
+                    <div>
                         <ul>
                             <li><a href="#">로그인</a></li>
                             <li><a href="#">회원가입</a></li>
                             <li><a href="#">주문조회</a></li>
                         </ul>
 
-                        <button type="button" class="toggle">한국어
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </nav>
+                        <select id="lang">
+                            <option value="한국어1">🇰🇷 한국어</option>
+                        </select>                        
+                        
+                    </div>
                 </div>
     
-                <div class="main-menu"></div>
+                <div class="main-menu">
+                    <div >
+                        <nav class="main-nav1">
+                            <ul>
+                                <li><a href="#"><img src="img/icon-menu.png" alt="메뉴"></a></li>
+                                <li><a href="#">MD's Pick</a></li>
+                                <li><a href="#">브랜드관</a></li>
+                                <li><a href="#">카테고리</a></li>
+                                <li><a href="#">서점 전용</a></li>
+                                <li><a href="#">서포터즈 전용</a></li>
+                                <li><a href="#">커뮤니티</a></li>
+                            </ul>
+                        </nav>
+    
+                        <nav class="main-nav2">
+                            <ul>
+                                <li><a href="#"><img src="img/ico_head_search_000.svg" alt="검색"></a></li>
+                                <li><a href="#"><img src="img/ico_head_user_000.svg" alt="프로필"></a></li>
+                                <li><a href="#"><img src="img/ico_head_basket_000.svg" alt="카트"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </header>
             
             <!-- 슬라이더 -->
             <div class="swiper-slideWrap"></div>
 
             <!-- 인덱스 베너 -->
-            <div class="index-ban"></div>
+            <div class="index-ban">
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><img src="img/ico_신착도서.png" alt="신착도서">
+                            </a>신착도서</li>
+
+                            <li><a href="#"><img src="img/ico_베스트.png" alt="베스트">
+                            </a>베스트</li>
+
+                            <li><a href="#"> <img src="img/ico_브랜드관.png" alt="브랜드관"></a>브랜드관</li>
+
+                            <li><a href="#"> <img src="img/ico_키워드.png" alt="키워드"></a>키워드</li>
+
+                            <li><a href="#"><img src="img/ico_입고예정.png" alt="입고예정"></a>입고 예정</li>
+
+                            <li><a href="#"> <img src="img/ico_재입고.png" alt="재입고"></a>재입고</li>
+
+                            <li><a href="#"> <img src="img/ico_리바인드북.png" alt="ico_리바인드북"></a>리바인드북</li>
+
+                            <li><a href="#"> <img src="img/ico_기획전.png" alt="기획전"></a>영품문고 기획전</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
             <!-- 신착 도서 -->
             <div class="new-book"></div>
