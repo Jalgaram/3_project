@@ -15,6 +15,8 @@
     cursor: pointer;
 }
 
+// 메인 메뉴 꾸미는 거
+
 // 슬라이드
 .swiper-slideWrap{
     @include full-width;
@@ -56,11 +58,14 @@
                     }
 
                     a{
-                        width: 78px;
-                        height: auto;
+                        width: 90px;
+                        height: 90px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         background-color: #fafafa;
                         border-radius: 50%;
-                        margin-bottom: 5px;
+                        margin-bottom: 15px;
                     }
                 }
             }
@@ -136,4 +141,12 @@
     height: 184px;
     @include margin-auto;
     background-color: plum;
+}
+
+// 리뷰
+.review{
+    @include full-width;
+    height: 488px;
+    @include margin-auto;
+    background-color: lightpink;
 }

@@ -246,11 +246,14 @@ footer {
   height: auto;
 }
 .index-ban div nav ul li a {
-  width: 78px;
-  height: auto;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fafafa;
   border-radius: 50%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .new-book {
@@ -314,4 +317,11 @@ footer {
   height: 184px;
   margin: 0 auto;
   background-color: plum;
+}
+
+.review {
+  max-width: 1912px;
+  height: 488px;
+  margin: 0 auto;
+  background-color: lightpink;
 }
