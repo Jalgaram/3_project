@@ -66,8 +66,17 @@
                         background-color: #fafafa;
                         border-radius: 50%;
                         margin-bottom: 15px;
+                        transition: transform 0.5s ease, box-shadow 0.5s ease;
+                    }
+
+                    &:hover{
+                        a{
+                            box-shadow: 0 0 15px rgba(108, 108, 108, 0.3);
+                            transform: translateY(-6px);
+                        }
                     }
                 }
+                
             }
         }
     }
@@ -94,7 +103,16 @@
     @include full-width;
     height: 217px;
     @include margin-auto;
-    background-color: lightpink;
+    
+    a{
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 1252px;
+            height: 217px;
+        }
+    }
 }
 
 // 화제의 책
@@ -134,13 +152,86 @@
     @include full-width;
     height: 104px;
     @include margin-auto;
-    background-color: lavender;
+    border: {
+        top: 1px solid #ddd;
+        bottom: 1px solid #ddd;
+    }
+
+    .notice-wrap{
+        width: 1252px;
+        height: 100%;
+        @include margin-auto;
+        display: flex;
+        align-items: center;
+        $height: 33px;
+
+        .notice-box1{
+            width: 220px;
+            height: $height;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: beige;
+
+            p{
+                font-size: 20px;
+            }
+
+            div{
+                height: $height;
+                display: flex;
+                align-items: center;
+                background-color: #fafafa;
+            }
+        }
+
+        .notice-box2{
+            width: 842px;
+            height: $height;
+            background-color: azure
+        }
+
+        .notice-box3{
+            width: 190px;
+            height: $height;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            background-color: beige;
+
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: #000;
+                font-size: 13px;
+                
+                i{
+                    margin-top: 3px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
 }
+
 .notice2{
     @include full-width;
     height: 184px;
     @include margin-auto;
-    background-color: plum;
+
+    a{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 800px;
+            height: 113px;
+        }
+    }
 }
 
 // 리뷰
