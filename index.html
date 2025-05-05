@@ -9,6 +9,11 @@
          <link rel="stylesheet" href="css/index.css">
 
          <!-- CDN -->
+         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+
+         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
          <!-- Thin 스타일용 CDN -->
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css">
 
@@ -39,7 +44,7 @@
                         <nav class="main-nav1">
                             <ul>
                                 <li><a href="#"><img src="img/icon-menu.png" alt="메뉴"></a></li>
-                                <li><a href="#">MD's Pick</a></li>
+                                <li><a href="#">MD’s Pick</a></li>
                                 <li><a href="#">브랜드관</a></li>
                                 <li><a href="#">카테고리</a></li>
                                 <li><a href="#">서점 전용</a></li>
@@ -118,16 +123,22 @@
             <div class="notice1">
                 <div class="notice-wrap">
                     <div class="notice-box1">
-                        <p><strong>공지사항</strong></p>
+                        <p>공지사항</p>
                         
                         <div>
-                            <a href="#"><i class="fi fi-ts-angle-small-left"></i></a>
+                            <i class="notice-prev fi fi-ss-angle-left"></i>
     
-                            <a href="#"><i class="fi fi-ts-angle-small-right"></i></a>
+                            <i class="notice-next fi fi-ss-angle-right"></i>
                         </div>
                     </div>
     
-                    <div class="notice-box2"></div>
+                    <div class="notice-box2">
+                        <ul class="notice-slide-wrap">
+                            <li><a href="#">5월 배송/고객센터 휴무 및 지연 안내</a></li>
+                            
+                            <li> <a href="#">PG사 변경 안내 (나이스페이먼츠 > 토스페이먼츠)</a></li>
+                        </ul>
+                    </div>
     
                     <div class="notice-box3">
                         <a href="#">더보기<i class="fi fi-ts-arrow-small-right"></i></a>
@@ -136,11 +147,90 @@
             </div>
 
             <div class="notice2">
-                <a href="#"><img src="img/구매안전서비스.jpg" alt="구매안전서비스"></a>
+                <a id="payments"><img src="img/구매안전서비스.jpg" alt="구매안전서비스"></a>
             </div>
 
             <!-- 리뷰 -->
-             <div class="review"></div>
+             <div class="review">
+                <div class="review-wrap">
+                    <p>New Review</p>
+
+                    <div class="review-slide-wrap">
+                        <ul class="review-slide">
+                            <li>
+                                <div>
+                                    <img src="img/리뷰1.jpeg" alt="리뷰1">
+                                    <p>이 책을 아주 많이 사랑할 것 같은 예감이 들어요 처음엔 책 디자인이 마음 ...</p>
+                                    <p class="review-p"><span>★★★★★</span>네******* 2025.04.19</p>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                            <li>
+                                <div></div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <i class="review-prev fi fi-ss-angle-left"></i>
+    
+                    <i class="review-next fi fi-ss-angle-right"></i>
+                    
+                </div>
+             </div>
 
             <!-- 푸터 -->
             <footer>
@@ -152,7 +242,7 @@
                             <ul>
                                 <li><a href="#">회사소개</a></li>
                                 <li><a href="#">이용약관</a></li>
-                                <li><a href="#"><strong>개인정보 취급방침</strong></a></li>
+                                <li><a href="#"><span>개인정보 취급방침</span></a></li>
                                 <li><a href="#">이용안내</a></li>
                                 <li><a href="#">입점안내</a></li>
                                 <li><a href="#">서점제휴</a></li>
@@ -178,7 +268,7 @@
 
                     <!-- 고객센터 -->
                     <div class="footerBox2">
-                        <p><strong>고객센터</strong></p>
+                        <p>고객센터</p>
 
                         <ul>
                             <li>
@@ -196,7 +286,7 @@
 
                     <!-- 커뮤니티 -->
                     <div class="footerBox3">
-                        <p><strong>커뮤니티</strong></p>
+                        <p>커뮤니티</p>
 
                         <div class="footerBox3-menu">
                             <ul>

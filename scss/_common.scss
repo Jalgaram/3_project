@@ -1,25 +1,10 @@
 @charset "utf-8";
 
-// 폰트
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// 폰트 한국어
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box;
-}
-
-ul, ol {text-decoration: none;}
-li{list-style: none;}
-a{text-decoration: none;}
-
-#wrap{
-    width: 100%;
-    margin: {
-        top: 0.8%;
-        bottom: 1.3%;
-    }
-}
+// 폰트 영어
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // MIXIN
 @mixin full-width{
@@ -37,6 +22,31 @@ a{text-decoration: none;}
 @mixin cursor-point{
     cursor: pointer;
 }
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+ul, ol {text-decoration: none;}
+li{list-style: none;}
+a{text-decoration: none; @include cursor-point;}
+
+#wrap{
+    width: 100%;
+    margin: {
+        top: 0.8%;
+        bottom: 1.3%;
+    }
+}
+
 
 // 헤더 + 메뉴바
 header{
@@ -84,7 +94,6 @@ header{
                 font-size: 12px;
                 border: 0.5px solid #ddd;
                 border-radius: 4px;
-                @include cursor-point;
             }
         }
     }
@@ -130,7 +139,7 @@ header{
                 a{
                     color: #222;
                     font: {
-                        weight: bold;
+                        weight: 500;
                         size: 18px
                     }
                 }
@@ -181,12 +190,17 @@ footer{
             color: $fontColor;
         }
 
+
         .footerNav > ul{
             display: flex;
 
             li{
                 margin-right: 10px;
                 text-align: center;
+
+                span{
+                    font-weight: 700;
+                }
             }
 
             li:not(:last-child)::after{
@@ -228,7 +242,12 @@ footer{
 
         p, ul>li, a{color: $fontColor;}
 
-        p{font-size: 18px;}
+        p{
+            font: {
+                size: 18px;
+                weight: 800;
+            }
+        }
 
         a{
             font-size: 23px;
@@ -256,7 +275,12 @@ footer{
 
         p, a{color: $fontColor;}
 
-        p{font-size: 18px;}
+        p{
+            font: {
+                size: 18px;
+                weight: 800;
+            }
+        }
 
         .footerBox3-menu{
             display: flex;
