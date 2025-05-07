@@ -71,6 +71,7 @@ header .up-header div select {
   font-size: 12px;
   border: 0.5px solid #ddd;
   border-radius: 4px;
+  cursor: pointer;
 }
 header .main-menu {
   max-width: 1912px;
@@ -317,7 +318,7 @@ footer {
   max-width: 1912px;
   height: 723px;
   margin: 0 auto;
-  background-color: lightskyblue;
+  background-color: #f5f5f5;
 }
 
 .project-ban {
@@ -390,11 +391,11 @@ footer {
   width: 842px;
   height: 100%;
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .notice1 .notice-wrap .notice-box2 .notice-slide-wrap li a {
   text-decoration: none;
-  color: #000;
+  color: #333;
 }
 .notice1 .notice-wrap .notice-box3 {
   width: 190px;
@@ -478,9 +479,64 @@ footer {
 .review .review-wrap .review-slide li div .review-box {
   width: 100%;
   height: 185px;
-  background-color: azure;
+  padding: 20px 15px;
+  row-gap: 16px;
 }
-.review .review-wrap i {
+.review .review-wrap .review-slide li div .review-box p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+.review .review-wrap .review-slide li div .review-box .review-text1 {
+  color: #555;
+}
+.review .review-wrap .review-slide li div .review-box .review-text2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  color: #999;
+  font-size: 11px;
+}
+.review .review-wrap .review-slide li div .review-box .review-text2 .star {
+  font-size: 13px;
+  color: rgb(18, 18, 18);
+  background-color: transparent;
+}
+.review .review-wrap .review-slide li div .review-box hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+.review .review-wrap .review-slide li div .review-box .review-book {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 0 8px;
+}
+.review .review-wrap .review-slide li div .review-box .review-book img {
+  width: 40px;
+  height: 40px;
+}
+.review .review-wrap .review-slide li div .review-box .review-book .review-text-wrap {
+  width: auto;
+  height: 100%;
+}
+.review .review-wrap .review-slide li div .review-box .review-book .review-text-wrap h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+.review .review-wrap .review-slide li div .review-box .review-book .review-text-wrap p {
+  font-size: 12px;
+  color: #999;
+}
+.review .review-wrap .review-slide li div .review-box .review-book .review-text-wrap p span {
+  color: #333;
+  font-weight: 800;
+}
+.review .review-wrap .review-prev,
+.review .review-wrap .review-next {
   width: 38px;
   height: 62px;
   position: absolute;

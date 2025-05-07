@@ -94,6 +94,7 @@ header{
                 font-size: 12px;
                 border: 0.5px solid #ddd;
                 border-radius: 4px;
+                @include cursor-point;
             }
         }
     }

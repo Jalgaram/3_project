@@ -32,5 +32,3 @@ document.getElementById('payments').addEventListener('click', function(e){
         'width=540px,height=700px,left=10px'
     )
 });
-
-// 리뷰
