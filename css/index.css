@@ -283,7 +283,17 @@ footer {
   max-width: 1912px;
   height: 488px;
   margin: 0 auto;
-  background-color: lightgreen;
+}
+.best-book .bestWrap {
+  width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #ddd;
+}
+.best-book .bestWrap h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .center-ban {

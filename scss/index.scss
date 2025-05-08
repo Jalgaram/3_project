@@ -95,7 +95,22 @@
     @include full-width;
     height: 488px;
     @include margin-auto;
-    background-color: lightgreen;
+
+   .bestWrap{
+        @include content-width;
+        height: auto;
+        @include margin-auto;
+        background-color: #ddd;
+        
+        h3{
+            text-align: center;
+
+            font: {
+                size: 30px;
+                weight: 500;
+            }
+        }
+   }
 }
 
 // 중간 베너

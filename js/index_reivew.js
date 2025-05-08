@@ -8,7 +8,7 @@ const reviews = [
         bookImg: "img/리뷰1책.png",
         bookTitle: "우정 이상 사랑 초과- 강릉 여행 서간집",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
  //2 
     {
@@ -19,7 +19,7 @@ const reviews = [
         bookImg: "img/리뷰2책.jpg",
         bookTitle: "내 일기장 펼치면 바보!",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 // 3
     {
@@ -30,7 +30,7 @@ const reviews = [
         bookImg: "img/리뷰3책.jpg",
         bookTitle: "시선이 머무는 순간들",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 // 4
     {
@@ -41,7 +41,7 @@ const reviews = [
         bookImg: "img/리뷰4책.png",
         bookTitle: "아무도 내게 괜찮냐고 묻지 않았지만",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 // 5
     {
@@ -52,7 +52,7 @@ const reviews = [
         bookImg: "img/리뷰5책.jpg",
         bookTitle: "오늘도 나는",
         count: 2,
-        score: 100.0
+        score: `100.0`
     },
 // 6
     {
@@ -63,7 +63,7 @@ const reviews = [
         bookImg: "img/리뷰6책.jpg",
         bookTitle: "땅과 씨앗이 필요해",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
  //7
     {
@@ -74,7 +74,7 @@ const reviews = [
         bookImg: "img/리뷰7책.jpg",
         bookTitle: "낭만을 팝니다.",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 //8
     {
@@ -85,7 +85,7 @@ const reviews = [
         bookImg: "img/리뷰8책.jpg",
         bookTitle: "지지",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 //9
     {
@@ -96,7 +96,7 @@ const reviews = [
         bookImg: "img/리뷰9책.jpg",
         bookTitle: "계간 어린이와 문학(2023 겨울)",
         count: 2,
-        score: 100.0
+        score: `100.0`
     },
 //10 
     {
@@ -107,7 +107,7 @@ const reviews = [
         bookImg: "img/리뷰10책.jpg",
         bookTitle: "고 이즈 러브",
         count: 2,
-        score: 100.0
+        score: `100.0`
     },
 //11
     {
@@ -118,7 +118,7 @@ const reviews = [
         bookImg: "img/리뷰11책.jpg",
         bookTitle: "(리뷰어스)첫사랑 때문에 제주에 갔었어",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 //12
     {
@@ -129,7 +129,7 @@ const reviews = [
         bookImg: "img/리뷰12책.jpg",
         bookTitle: "광주 영화인 열전",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 //13
     {
@@ -140,7 +140,7 @@ const reviews = [
         bookImg: "img/리뷰13책.png",
         bookTitle: "서재가 있는 정원",
         count: 2,
-        score: 100.0
+        score: `100.0`
     },
 //14
     {
@@ -151,7 +151,7 @@ const reviews = [
         bookImg: "img/리뷰14책.jpg",
         bookTitle: "산책집",
         count: 1,
-        score: 100.0
+        score: `100.0`
     },
 //15
     {
@@ -162,7 +162,7 @@ const reviews = [
         bookImg: "img/리뷰15책.jpg",
         bookTitle: "보통의 유럽여행",
         count: 3,
-        score: 100.0
+        score: `100.0`
     },
 ];
 
