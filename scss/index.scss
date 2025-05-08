@@ -303,7 +303,7 @@
             justify-content: space-between;
 
             li{
-                width: 241px;
+                width: 240px;
                 height: 100%;
                 border: 1px solid #ddd;
                 border-radius: 5px;
@@ -337,6 +337,11 @@
 
                         .review-text1{
                             color: #555;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         .review-text2{
@@ -377,7 +382,7 @@
 
                                 h5{
                                     font: {
-                                        size: 12px;
+                                        size: 11px;
                                         weight: 600;
                                     }
                                     color: #333;

@@ -29,6 +29,6 @@ document.getElementById('payments').addEventListener('click', function(e){
     window.open(
         'https://consumer.tosspayments.com/escrow/detail?mertid=CF_indiepubdea',
         '구매안전서비스 | 토스페이먼츠',
-        'width=540px,height=700px,left=10px'
+        'width=540px,height=700px'
     )
 });
