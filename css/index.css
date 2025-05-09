@@ -284,16 +284,23 @@ footer {
   height: 488px;
   margin: 0 auto;
 }
-.best-book .bestWrap {
-  width: 1280px;
-  height: auto;
-  margin: 0 auto;
-  background-color: #ddd;
-}
-.best-book .bestWrap h3 {
+.best-book h3 {
   text-align: center;
   font-size: 30px;
   font-weight: 500;
+}
+.best-book .bestWrap {
+  width: 1252px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ddd;
+}
+.best-book .bestWrap .bestBox {
+  width: 298px;
+  height: 397px;
+  background-color: lightpink;
 }
 
 .center-ban {
