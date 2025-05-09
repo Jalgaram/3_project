@@ -348,9 +348,19 @@ footer {
 
 .hot-book {
   max-width: 1912px;
-  height: 903px;
+  height: 922px;
   margin: 0 auto;
-  background-color: lightsalmon;
+  background-color: lightcyan;
+}
+.hot-book h3 {
+  text-align: center;
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-weight: 500;
+}
+.hot-book .hotWrap {
+  width: 1280px;
+  height: auto;
 }
 
 .how-book {

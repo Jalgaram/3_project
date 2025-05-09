@@ -180,9 +180,23 @@
 // 화제의 책
 .hot-book{
     @include full-width;
-    height: 903px;
+    height: 922px;
     @include margin-auto;
-    background-color: lightsalmon;
+    background-color: lightcyan;
+
+    h3{
+        text-align: center;
+        margin-bottom: 2%;
+        font: {
+            size: 30px;
+            weight: 500;
+        }
+    }
+
+    .hotWrap{
+        @include content-width;
+        height: auto;
+    }
 }
 
 // 이 책 어떰요?
