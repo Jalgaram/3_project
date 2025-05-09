@@ -281,26 +281,55 @@ footer {
 
 .best-book {
   max-width: 1912px;
-  height: 488px;
+  height: 550px;
   margin: 0 auto;
 }
 .best-book h3 {
   text-align: center;
+  margin-bottom: 2%;
   font-size: 30px;
   font-weight: 500;
 }
 .best-book .bestWrap {
   width: 1252px;
-  height: auto;
+  height: 377px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  background-color: #ddd;
 }
 .best-book .bestWrap .bestBox {
   width: 298px;
-  height: 397px;
-  background-color: lightpink;
+  height: 367px;
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+  cursor: pointer;
+}
+.best-book .bestWrap .bestBox .best-imgBox {
+  width: 298px;
+  height: 298px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+.best-book .bestWrap .bestBox .best-imgBox img {
+  width: 150px;
+  height: auto;
+}
+.best-book .bestWrap .bestBox p {
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+.best-book .bestWrap .bestBox h6 {
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
 }
 
 .center-ban {
