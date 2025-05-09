@@ -227,7 +227,9 @@ function reviewPrev() {
   }
   
   setInterval(reviewNext, 3000);
-  
+
+
+//   리뷰 제어버튼
   $('.review-prev').click(function(){
     reviewPrev();
   });

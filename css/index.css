@@ -503,6 +503,7 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-height: 36px;
 }
 .review .review-wrap .review-slide li div .review-box .review-text2 {
   display: flex;
