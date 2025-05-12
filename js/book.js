@@ -14,7 +14,7 @@ async function fetchBooks(query) {
     });
 
     if(!response.ok){
-        throw new Error(`HTTP 오류: $(response.status)`);
+        throw new Error(`HTTP 오류: ${response.status}`);
     }
 
     return response.json();
@@ -29,16 +29,39 @@ async function bestBookData(){
             const data = await fetchBooks(querys[i]);
 
             for(let j=0; j<Math.min(5, data.documents.length); j++){
-                $('.bestWrap').eq(j).append('<div class= bestBox></div>');
+                $('.bestWrap').eq(j).append('<div class="bestBox"></div>');
                 const bestDiv = $('.bestWrap').eq(j).find('.bestBox').last();
     
-                bestDiv.append('<div class=best-imgBox><img src='+data.documents[j].thumbnail+'></div>');
+                bestDiv.append('<div class="best-imgBox"><img src='+data.documents[j].thumbnail+'"></div>');
                 bestDiv.append('<p>'+data.documents[j].title+'</p>');
                 bestDiv.append('<h6>'+Number(data.documents[j].price).toLocaleString()+'원</h6>');
             }
         }
     } catch (error){
-        console.log('에러발생', error);
+        console.log('에러발생(베스트)', error);
     }
 }
 bestBookData();
+
+// 화제의 책
+async function hotBookData(){
+    try{
+        const querys = ['개 마음 다이어리', '강아지책', '내 완변학 강아지를 소개합니다', '말리와 나', '개와 고양이 그리고 나라는 인간', '한때 우리의 전부였던:밀레니얼 키즈의 향수', '내가 너에게 다가가는 시간','우리는 모두 아름답게 사라지는 거야', '겨울의 작은 집'];
+
+        for(let i=0; i<querys.length; i++){
+            const data = await fetchBooks(querys[i]);
+
+            for(let j=0; j<Math.min(9, data.documents.length); j++){
+                $('.hotWrap').eq(j).append('<div class="hotBox">');
+                const hotDiv = $('.hotWrap').eq(j).find('.hotBox').last();
+
+                hotDiv.append('<div class="hot-imgBox"><img src="'+data.documents[j].thumbnail+'"></div>');
+                hotDiv.append('<p>'+data.documents[j].title+'</p>');
+                hotDiv.append('<h6>'+Number(data.documents[j].price).toLocaleString()+'원</h6>');
+            }
+        }
+    } catch (error){
+        console.log('에러발생(화제의 책)', error);
+    }
+}
+hotBookData();

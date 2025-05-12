@@ -2,16 +2,19 @@
 @import "common";
 
 // MIXIN
-@mixin full-width{
+@mixin full-width {
     max-width: 1912px;
 }
-@mixin content-width{
+
+@mixin content-width {
     width: 1280px;
 }
-@mixin margin-auto{
+
+@mixin margin-auto {
     margin: 0 auto;
 }
-@mixin cursor-pointer{
+
+@mixin cursor-pointer {
     cursor: pointer;
 }
 
@@ -19,7 +22,7 @@
 // 메인 메뉴 꾸미는 거
 
 // 슬라이드
-.swiper-slideWrap{
+.swiper-slideWrap {
     @include full-width;
     height: 600px;
     @include margin-auto;
@@ -27,37 +30,37 @@
 }
 
 // 인덱스 베너
-.index-ban{
+.index-ban {
     @include full-width;
     height: 152px;
-    @include margin-auto; 
+    @include margin-auto;
 
-    div{
+    div {
         @include content-width;
         height: 100%;
         @include margin-auto;
         display: flex;
         align-items: center;
 
-        nav{
+        nav {
             width: 100%;
 
-            ul{
+            ul {
                 width: 100%;
                 display: flex;
                 justify-content: space-around;
-    
-                li{
+
+                li {
                     display: flex;
                     flex-direction: column;
                     text-align: center;
 
-                    img{
+                    img {
                         width: 78px;
                         height: auto;
                     }
 
-                    a{
+                    a {
                         width: 90px;
                         height: 90px;
                         display: flex;
@@ -69,21 +72,21 @@
                         transition: transform 0.5s ease, box-shadow 0.5s ease;
                     }
 
-                    &:hover{
-                        a{
+                    &:hover {
+                        a {
                             box-shadow: 0 0 15px rgba(108, 108, 108, 0.3);
                             transform: translateY(-6px);
                         }
                     }
                 }
-                
+
             }
         }
     }
 }
 
 // 신착 도서
-.new-book{
+.new-book {
     @include full-width;
     height: 579px;
     @include margin-auto;
@@ -91,36 +94,38 @@
 }
 
 // 베스트
-.best-book{
+.best-book {
     @include full-width;
     height: 550px;
     @include margin-auto;
 
-    h3{
+    h3 {
         text-align: center;
         margin-bottom: 2%;
+
         font: {
             size: 30px;
             weight: 500;
         }
     }
 
-   .bestWrap{
+    .bestWrap {
         width: 1252px;
         height: 377px;
         @include margin-auto;
         display: flex;
         justify-content: space-between;
 
-        .bestBox{
+        .bestBox {
             width: 298px;
             height: 367px;
             display: flex;
             flex-flow: column;
             row-gap: 10px;
+            @include margin-auto;
             @include cursor-pointer;
 
-            .best-imgBox{
+            .best-imgBox {
                 width: 298px;
                 height: 298px;
                 display: flex;
@@ -129,48 +134,51 @@
                 background-color: #f5f5f5;
                 border-radius: 15px;
 
-                img{
+                img {
                     width: 150px;
                     height: auto;
                 }
             }
 
-            p{
+            p {
                 padding: {
                     top: 15px;
                     left: 10px;
                 }
-                
+
                 font: {
                     size: 13px;
                     weight: 600;
                 }
+
                 color: #555;
             }
 
-            h6{
+            h6 {
                 padding-left: 10px;
+
                 font: {
                     size: 13px;
                     weight: 700;
                 }
-                color: #333; 
+
+                color: #333;
             }
         }
-   }
+    }
 }
 
 // 중간 베너
-.center-ban{
+.center-ban {
     @include full-width;
     height: 217px;
-    @include margin-auto;
-    
-    a{
+    margin: 2% auto;
+
+    a {
         display: flex;
         justify-content: center;
 
-        img{
+        img {
             width: 1252px;
             height: 217px;
         }
@@ -178,37 +186,172 @@
 }
 
 // 화제의 책
-.hot-book{
+.hot-book {
     @include full-width;
     height: 922px;
-    @include margin-auto;
-    background-color: lightcyan;
+    margin: 2% auto;
 
-    h3{
+    h3 {
         text-align: center;
-        margin-bottom: 2%;
+
+        margin: {
+            top: 5%;
+            bottom: 2%;
+        }
+
         font: {
             size: 30px;
             weight: 500;
         }
     }
 
-    .hotWrap{
-        @include content-width;
-        height: auto;
+    .hotWrap {
+        width: 1252px;
+        height: 830px;
+        @include margin-auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .hotBox {
+            width: 298px;
+            height: 367px;
+            display: flex;
+            flex-flow: column;
+            row-gap: 10px;
+            @include margin-auto;
+            @include cursor-pointer;
+
+            .hot-imgBox {
+                width: 298px;
+                height: 298px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f5f5f5;
+                border-radius: 15px;
+
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+            }
+
+            p {
+                padding: {
+                    top: 15px;
+                    left: 10px;
+                }
+
+                font: {
+                    size: 13px;
+                    weight: 600;
+                }
+
+                color: #555;
+            }
+
+            h6 {
+                padding-left: 10px;
+
+                font: {
+                    size: 13px;
+                    weight: 700;
+                }
+
+                color: #333;
+            }
+        }
     }
 }
 
 // 이 책 어떰요?
-.how-book{
+.how-book {
     @include full-width;
-    height: 3604px;
+    height: 3785px;
     @include margin-auto;
-    background-color: lightseagreen;
+
+    h3 {
+        text-align: center;
+        margin: {
+            top: 4%;
+            bottom: 2%;
+        }
+
+        font: {
+            size: 30px;
+            weight: 500;
+        }
+    }
+
+    .howWrap {
+        @include content-width;
+        height: 377px;
+        @include margin-auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        .howBox {
+            width: 250px;
+            height: 367px;
+            display: flex;
+            flex-flow: column;
+            row-gap: 8px;
+            @include margin-auto;
+            @include cursor-pointer;
+
+            .how-imgBox{
+                width: 232px;
+                height: 232px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f5f5f5;
+                border-radius: 15px;
+
+                img {
+                    width: 120px;
+                    height: auto;
+                }
+            }
+
+            p{
+                padding: {
+                    top: 10px;
+                    left: 10px;
+                }
+
+                font: {
+                    size: 13px;
+                    weight: 600;
+                }
+                 
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                color: #555;
+            }
+
+            h6{
+                padding-left: 10px;
+
+                font: {
+                    size: 13px;
+                    weight: 700;
+                }
+
+                color: #333;
+            }
+        }
+    }
 }
 
 // 타인의 책장
-.your-book{
+.your-book {
     @include full-width;
     height: 723px;
     @include margin-auto;
@@ -216,7 +359,7 @@
 }
 
 // 프로젝트 베너
-.project-ban{
+.project-ban {
     @include full-width;
     height: 427px;
     @include margin-auto;
@@ -224,16 +367,17 @@
 }
 
 // 공지사항
-.notice1{
+.notice1 {
     @include full-width;
     height: 104px;
     @include margin-auto;
+
     border: {
         top: 1px solid #ddd;
         bottom: 1px solid #ddd;
     }
 
-    .notice-wrap{
+    .notice-wrap {
         width: 1252px;
         height: 100%;
         @include margin-auto;
@@ -241,23 +385,23 @@
         align-items: center;
         $height: 33px;
 
-        .notice-box1{
+        .notice-box1 {
             width: 220px;
             height: $height;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            
-            p{
+
+            p {
                 font-size: 24px;
                 font-weight: 500;
             }
 
-            div{
+            div {
                 display: flex;
                 align-items: center;
 
-                i{
+                i {
                     width: 34px;
                     height: 34px;
                     display: flex;
@@ -273,55 +417,55 @@
                     @include cursor-pointer;
                 }
 
-                .notice-next{
+                .notice-next {
                     margin-left: 12px;
                 }
 
             }
         }
 
-        .notice-box2{
+        .notice-box2 {
             width: 842px;
             height: $height;
             overflow: hidden;
             position: relative;
 
-            .notice-slide-wrap{
+            .notice-slide-wrap {
                 width: 1684px;
                 height: 100%;
                 display: flex;
                 align-items: center;
 
-                li{
+                li {
                     width: 842px;
                     height: 100%;
                     padding-left: 20px;
                     font-size: 18px;
 
-                    a{
+                    a {
                         text-decoration: none;
                         color: #333;
                     }
                 }
             }
         }
-        
 
-        .notice-box3{
+
+        .notice-box3 {
             width: 190px;
             height: $height;
             display: flex;
             justify-content: right;
             align-items: center;
 
-            a{
+            a {
                 text-decoration: none;
                 display: flex;
                 align-items: center;
                 color: #000;
                 font-size: 13px;
-                
-                i{
+
+                i {
                     margin-top: 3px;
                     font-size: 20px;
                 }
@@ -331,18 +475,18 @@
 
 }
 
-.notice2{
+.notice2 {
     @include full-width;
     height: 184px;
     @include margin-auto;
 
-    a{
+    a {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             width: 800px;
             height: 113px;
         }
@@ -350,68 +494,70 @@
 }
 
 // 리뷰
-.review{
+.review {
     @include full-width;
     height: 520px;
     margin: 20px auto;
     margin-bottom: 5px;
 
-    p{
+    p {
         font: {
             size: 23px;
             weight: 700;
         }
+
         margin-bottom: 25px;
     }
 
-    .review-wrap{
+    .review-wrap {
         @include content-width;
         height: 100%;
         @include margin-auto;
         position: relative;
         overflow: hidden;
 
-        .review-slide{
+        .review-slide {
             width: 3840px;
             height: 425px;
             @include margin-auto;
             display: flex;
             justify-content: space-between;
 
-            li{
+            li {
                 width: 240px;
                 height: 100%;
                 border: 1px solid #ddd;
                 border-radius: 5px;
                 @include cursor-pointer;
 
-                div{
+                div {
                     width: 100%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
 
-                    img{
+                    img {
                         width: 240px;
                         height: 240px;
                         border-radius: 5px;
                     }
-                    
-                    .review-box{
+
+                    .review-box {
                         width: 100%;
                         height: 185px;
                         padding: 20px 15px;
                         row-gap: 16px;
 
-                        p{
+                        p {
                             margin: 0;
+
                             font: {
                                 size: 13px;
                                 weight: 400;
                             }
                         }
 
-                        .review-text1{
+                        .review-text1 {
                             color: #555;
                             display: -webkit-box;
                             -webkit-line-clamp: 2;
@@ -419,29 +565,29 @@
                             overflow: hidden;
                             text-overflow: ellipsis;
 
-                             min-height: 36px;
+                            min-height: 36px;
                         }
 
-                        .review-text2{
+                        .review-text2 {
                             display: flex;
                             justify-content: space-between;
                             margin: 0;
                             color: #999;
                             font-size: 11px;
 
-                            .star{
+                            .star {
                                 font-size: 13px;
-                                color: rgba(18,18,18);
+                                color: rgba(18, 18, 18);
                                 background-color: transparent;
                             }
                         }
 
-                        hr{
+                        hr {
                             border: none;
                             border-top: 1px solid #ddd;
                         }
 
-                        .review-book{
+                        .review-book {
                             width: 100%;
                             height: 40px;
                             display: flex;
@@ -449,28 +595,29 @@
                             align-items: center;
                             gap: 0 8px;
 
-                            img{
+                            img {
                                 width: 40px;
                                 height: 40px;
                             }
 
-                            .review-text-wrap{
+                            .review-text-wrap {
                                 width: auto;
                                 height: 100%;
 
-                                h5{
+                                h5 {
                                     font: {
                                         size: 11px;
                                         weight: 600;
                                     }
+
                                     color: #333;
                                 }
 
-                                p{
+                                p {
                                     font-size: 12px;
                                     color: #999;
 
-                                    span{
+                                    span {
                                         color: #333;
                                         font-weight: 800;
                                     }
@@ -483,7 +630,7 @@
         }
 
         .review-prev,
-        .review-next{
+        .review-next {
             width: 38px;
             height: 62px;
             position: absolute;
@@ -498,11 +645,12 @@
             @include cursor-pointer;
         }
 
-        .review-prev{
+        .review-prev {
             left: 10px;
         }
-        .review-next{
-            right:20px;
+
+        .review-next {
+            right: 20px;
         }
     }
 }
