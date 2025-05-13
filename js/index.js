@@ -1,5 +1,11 @@
 // 슬라이더
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".swiper-slideWrap", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -9,6 +15,9 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+setInterval(swiperNext, 3000);
 
 // 공지사항 슬라이더
 function prev() {

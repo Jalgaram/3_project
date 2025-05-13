@@ -27,7 +27,6 @@ a {
 
 #wrap {
   width: 100%;
-  margin-top: 0.8%;
   margin-bottom: 1.3%;
 }
 
@@ -221,11 +220,17 @@ footer {
 }
 
 .swiper-slideWrap {
-  width: 1280px;
+  width: 1300px;
   height: 600px;
   margin: 0 auto;
+  margin-bottom: 2%;
+  position: relative;
   overflow: hidden;
-  background-color: lightcyan;
+}
+.swiper-slideWrap:hover .swiper-button-next,
+.swiper-slideWrap:hover .swiper-button-prev {
+  opacity: 1;
+  pointer-events: auto;
 }
 .swiper-slideWrap .swiper-wrapper {
   width: 5120px;
@@ -234,18 +239,56 @@ footer {
 .swiper-slideWrap .swiper-wrapper .swiper-slide {
   width: 1280px;
   height: 100%;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  padding: 0 1%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox {
+  padding-left: 1%;
+}
+.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox p {
+  font-size: 20px;
+  line-height: 50px;
+}
+.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox span {
+  font-size: 38px;
+  font-weight: 700;
+}
+.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox .more {
+  width: 70px;
+  text-align: center;
+  margin-top: 25px;
+  padding: 5px;
+  background-color: #222;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 15px;
+}
+.swiper-slideWrap .swiper-wrapper .swiper-slide img {
+  width: 390px;
+  height: auto;
+}
+.swiper-slideWrap .swiper-button-next,
+.swiper-slideWrap .swiper-button-prev {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.swiper-slideWrap .swiper-button-next,
+.swiper-slideWrap .swiper-button-prev::after {
+  color: #444;
+}
+.swiper-slideWrap .swiper-pagination {
+  color: #222;
 }
 
 .index-ban {
   max-width: 1912px;
   height: 152px;
   margin: 0 auto;
+  margin-bottom: 3%;
 }
 .index-ban div {
   width: 1280px;
@@ -291,7 +334,26 @@ footer {
   max-width: 1912px;
   height: 579px;
   margin: 0 auto;
-  background-color: lightgray;
+  margin-bottom: 3%;
+  padding-top: 2%;
+  background: linear-gradient(to bottom, #f5f5f5 50%, lightyellow 50%);
+}
+.new-book .new-fontWrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+.new-book .new-fontWrap p {
+  text-align: right;
+}
+.new-book .new-fontWrap p a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+.new-book .new-fontWrap h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .best-book {
