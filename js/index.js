@@ -16,8 +16,45 @@ var swiper = new Swiper(".swiper-slideWrap", {
   },
 });
 
+document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+  if (index === swiper.activeIndex) {
+    slide.classList.add('active');
+  }
+});
 
-setInterval(swiperNext, 3000);
+swiper.on('slideChangeTransitionEnd', () => {
+  document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+    if (index === swiper.activeIndex) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+});
+
+// 신착 도서 슬라이더
+newprev = () => {
+  $('.new-wrapper .new-slide:last').prependTo('.new-wrapper');
+  $('.new-wrapper').css('margin-left', -318);
+  $('.new-wrapper').stop().animate({marginLeft: 0}, 800);
+}
+
+newnext = () => {
+   $('.new-wrapper').stop().animate({marginLeft: -318}, 800, () => {
+    $('.new-wrapper .new-slide:first').appendTo('.new-wrapper');
+    $('.new-wrapper').css({ marginLeft: 0 });
+   });
+}
+
+setInterval(newnext, 6000);
+
+$('.new-prev').click(function () {
+  newprev();
+});
+$('.new-next').click(function () {
+  newnext();
+});
+
 
 // 공지사항 슬라이더
 function prev() {

@@ -55,9 +55,18 @@
             .swiper-fontbox {
                 padding-left: 1%;
 
+                p,
+                span,
+                .more {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+
                 p {
                     font-size: 20px;
                     line-height: 50px;
+                    transition-delay: 0.1s
                 }
 
                 span {
@@ -65,6 +74,8 @@
                         size: 38px;
                         weight: 700;
                     }
+
+                    transition-delay: 0.3s;
                 }
 
                 .more {
@@ -76,12 +87,20 @@
                     font-size: 15px;
                     color: #fff;
                     border-radius: 15px;
+                    transition-delay: 0.5s;
                 }
             }
 
             img {
                 width: 390px;
                 height: auto;
+            }
+
+            &.active .swiper-fontbox p,
+            &.active .swiper-fontbox span,
+            &.active .swiper-fontbox .more {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
@@ -164,21 +183,33 @@
 .new-book {
     @include full-width;
     height: 579px;
-    @include margin-auto;
-    margin-bottom: 3%;
+    margin: 5% auto;
+    position: relative;
     padding-top: 2%;
-    background: linear-gradient(to bottom, #f5f5f5 50%, lightyellow 50%);
+    background: linear-gradient(to bottom, #f5f5f5 73%, #fff 27%);
+
+     &:hover {
+        .new-next,
+        .new-prev {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
 
     .new-fontWrap {
         @include content-width;
         @include margin-auto;
+        margin-bottom: 2%;
 
         p {
+            margin-top: 5px;
             text-align: right;
 
             a {
+                margin-right: 2%;
                 text-decoration: none;
                 color: #333;
+                @include cursor-pointer;
 
                 font: {
                     size: 15px;
@@ -194,6 +225,95 @@
                 weight: 500;
             }
         }
+    }
+
+    .newSwiper {
+        width: 1252px;
+        height: 447px;
+        @include margin-auto;
+        overflow: hidden;
+
+        .new-wrapper {
+            width: 6255px;
+            height: 100%;
+            display: flex;
+
+            .new-slide {
+                width: 300px;
+                height: 400px;
+                margin-right: 18px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+                @include cursor-pointer;
+
+                .new-imgBox {
+                    width: 282px;
+                    height: 282px;
+                    @include margin-auto;
+                    margin-top: 9px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f5f5f5;
+                    border-radius: 8px;
+
+                    img {
+                        width: 140px;
+                        height: auto;
+                    }
+                }
+
+                p {
+                    padding: {
+                        top: 15px;
+                        left: 15px;
+                    }
+
+                    margin-bottom: 10px;
+
+                    font: {
+                        size: 13px;
+                        weight: 600;
+                    }
+
+                    color: #555;
+                }
+
+                h6 {
+                    padding-left: 15px;
+
+                    font: {
+                        size: 14px;
+                        weight: 700;
+                    }
+
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    .new-prev,
+    .new-next {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        color: #585858;
+        border-radius: 5px;
+        @include cursor-pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    .new-prev{
+        left: 14%;
+    }
+    .new-next{
+        right: 14%;
     }
 }
 
@@ -254,6 +374,12 @@
                     size: 13px;
                     weight: 600;
                 }
+
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 color: #555;
             }

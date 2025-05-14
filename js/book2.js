@@ -2,7 +2,7 @@ async function fetchBooks2(query) {
     const params = new URLSearchParams({
         target: "title",
         query,
-        size: 50
+        size: 100
     });
     const url = `https://dapi.kakao.com/v3/search/book?${params}`;
 
@@ -19,6 +19,31 @@ async function fetchBooks2(query) {
 
     return response.json();
 }
+
+// 신착도서
+async function newBookData(){
+    try {
+        const data = await fetchBooks2('만화');
+
+        for (let j = 0; j < Math.min(16, data.documents.length); j++) {
+            const book= data.documents[j];
+
+            const boxHTML = `
+                <div class="new-slide">
+                    <div class="new-imgBox"><img src="${book.thumbnail}"></div>
+                    <p>${book.title}</p>
+                    <h6>${Number(book.price).toLocaleString()}원</h6>
+                </div>
+            `;
+
+            $('.new-wrapper').append(boxHTML);
+            $('#filter > option').eq(j+1).text(book.title);
+        }
+    } catch (error) {
+        console.log('에러발생(신착 도서)', error);
+    }
+}
+newBookData();
 
 // 이 책 어떰요
 async function howBookData() {

@@ -23,7 +23,12 @@ async function fetchBooks(query) {
 // 베스트
 async function bestBookData(){
     try{
-        const querys = ['다정한 건 오래 머무르고', '더 납작 엎드릴게요', '개와 고양이, 오래된 신문을 펼치다',  '마지막 산책이라니'];
+        const querys = [
+            '나루토',
+            '하이큐',
+            '주술회전',
+            '체인소맨'
+        ];
 
         for(let i=0; i<querys.length; i++){
             const data = await fetchBooks(querys[i]);
