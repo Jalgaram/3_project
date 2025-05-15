@@ -177,7 +177,7 @@ reviews.forEach(r => {
 
     li.innerHTML = `
         <div>
-             <img src="${r.img}" alt="리뷰1">
+             <img src="${r.img}" alt="리뷰">
              <div class="review-box">
                 <p class="review-text1">${r.text1}</p>
                 <p class="review-text2">

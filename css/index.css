@@ -416,9 +416,15 @@ footer {
 .new-book .newSwiper .new-wrapper .new-slide p {
   padding-top: 15px;
   padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 10px;
   font-size: 13px;
   font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #555;
 }
 .new-book .newSwiper .new-wrapper .new-slide h6 {
@@ -492,6 +498,7 @@ footer {
 .best-book .bestWrap .bestBox p {
   padding-top: 15px;
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 13px;
   font-weight: 600;
   display: -webkit-box;
@@ -567,6 +574,7 @@ footer {
 .hot-book .hotWrap .hotBox p {
   padding-top: 15px;
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 13px;
   font-weight: 600;
   color: #555;
@@ -623,6 +631,7 @@ footer {
 .how-book .howWrap .howBox p {
   padding-top: 10px;
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 13px;
   font-weight: 600;
   display: -webkit-box;
@@ -645,12 +654,153 @@ footer {
   margin: 0 auto;
   background-color: #f5f5f5;
 }
+.your-book h3 {
+  text-align: center;
+  padding-top: 3%;
+  margin-bottom: 1%;
+  font-size: 30px;
+  font-weight: 500;
+}
+.your-book p {
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  color: #999;
+}
+.your-book p a {
+  position: absolute;
+  top: 0;
+  right: 17%;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+}
+.your-book .yourSlider {
+  width: 1272px;
+  height: 518px;
+  margin: 0 auto;
+  margin-top: 2%;
+  overflow: hidden;
+}
+.your-book .yourSlider .yourSwiper-wrapper {
+  width: 2640px;
+  height: 100%;
+  display: flex;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide {
+  width: 264px;
+  height: 478px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+  cursor: pointer;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide img {
+  width: 247px;
+  height: 247px;
+  margin-top: 7px;
+  border-radius: 10px;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box hr {
+  width: 85%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box p {
+  margin: 0;
+  padding: 0 21px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-title {
+  margin-top: 7px;
+  font-weight: 600;
+  color: #111;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #777;
+  min-height: 36px;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-user,
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book {
+  width: 224px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book img {
+  width: 33px;
+  height: 33px;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book h5,
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book p {
+  padding-right: 5px;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book h5 {
+  font-size: 11px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book p {
+  padding: 0;
+  margin-top: 2px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 800;
+}
+.your-book .yourSlider .yourSwiper-wrapper .your-slide .your-box .your-Book p span {
+  color: #f94830;
+  font-size: 11px;
+}
 
 .project-ban {
   max-width: 1912px;
   height: 427px;
   margin: 0 auto;
   background-color: lightyellow;
+}
+.project-ban h3 {
+  text-align: center;
+  padding-top: 2%;
+  margin-bottom: 1%;
+  font-size: 30px;
+  font-weight: 500;
+}
+.project-ban p {
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  color: #999;
 }
 
 .notice1 {

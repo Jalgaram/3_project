@@ -23,7 +23,7 @@ async function fetchBooks2(query) {
 // 신착도서
 async function newBookData(){
     try {
-        const data = await fetchBooks2('만화');
+        const data = await fetchBooks2('에세이');
 
         for (let j = 0; j < Math.min(16, data.documents.length); j++) {
             const book= data.documents[j];

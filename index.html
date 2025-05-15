@@ -18,6 +18,7 @@
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
        
         <!-- 내 링크 -->
         <link rel="stylesheet" href="css/index.css">
@@ -186,27 +187,23 @@
 
             <!-- 타인의 책장 -->
             <div class="your-book">
-                <h3></h3>
-                <p><a href="#"></a></p>
-
+                <h3>타인의 책장</h3>
+                <p>고객님들이 직접 작성한 리뷰를 확인해보세요. <a href="#">더보기<i class="fi fi-ts-arrow-small-right"></i></a></p>
+                
                 <div class="yourSlider">
-                    <ul class="yourSlide">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
+                    <div class="yourSwiper-wrapper" id="yourSwiper"></div>
                 </div>
+
+                <div class="yourSwiper-button-next"></div>
+                <div class="yourSwiper-button-prev"></div>
+                <div class="yourSwiper-pagination"></div>
             </div>
 
             <!-- 프로젝트 베너 -->
-            <div class="project-ban"></div>
+            <div class="project-ban">
+                <h3>프로젝트</h3>
+                <p>독립출판 문화를 알리기 위한 인디펍 프로젝트</p>
+            </div>
 
             <!-- 공지사항 -->
             <div class="notice1">
@@ -344,8 +341,9 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <script src="js/index.js"></script>
-        <script src="js/index_reivew.js"></script>
         <script src="js/book.js"></script>
         <script src="js/book2.js"></script>
+        <script src="js/your.js"></script>
+        <script src="js/index_reivew.js"></script>
     </body>
 </html>

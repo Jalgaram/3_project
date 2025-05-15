@@ -55,7 +55,6 @@ $('.new-next').click(function () {
   newnext();
 });
 
-
 // 공지사항 슬라이더
 function prev() {
   $('.notice-slide-wrap li:last').prependTo('.notice-slide-wrap');
