@@ -152,6 +152,10 @@ yours.forEach(r => {
 const yourwiper = new Swiper(".yourSlider", {
     slidesPerView: 4.5,
     slidesPerGroup: 1,
+    autoplay: {
+    delay: 8000,
+    disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".yourSwiper-button-next",
         prevEl: ".yourSwiper-button-prev",
