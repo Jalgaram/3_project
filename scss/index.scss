@@ -22,7 +22,7 @@
 // 메인 메뉴 꾸미는 거
 
 // 슬라이드
-.swiper-slideWrap {
+.myswiper {
     width: 1300px;
     height: 600px;
     @include margin-auto;
@@ -39,11 +39,11 @@
         }
     }
 
-    .swiper-wrapper {
+    .myswiper-wrapper {
         width: 5120px;
         height: 100%;
 
-        .swiper-slide {
+        .myswiper-slide {
             @include content-width;
             height: 100%;
             padding: 0 1%;
@@ -105,19 +105,19 @@
         }
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    .myswiper-button-next,
+    .myswiper-button-prev {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev::after {
+    .myswiper-button-next,
+    .myswiper-button-prev::after {
         color: #444;
     }
 
-    .swiper-pagination {
+    .myswiper-button-pagination {
         color: #222;
     }
 }
@@ -248,6 +248,10 @@
                 box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
                 @include cursor-pointer;
 
+                &:hover img{
+                    opacity: 0.7;
+                }
+
                 .new-imgBox {
                     width: 282px;
                     height: 282px;
@@ -359,6 +363,10 @@
             @include margin-auto;
             @include cursor-pointer;
 
+            &:hover img{
+                    opacity: 0.7;
+            }
+
             .best-imgBox {
                 width: 298px;
                 height: 298px;
@@ -463,6 +471,10 @@
             @include margin-auto;
             @include cursor-pointer;
 
+            &:hover img{
+                    opacity: 0.7;
+            }
+
             .hot-imgBox {
                 width: 298px;
                 height: 298px;
@@ -544,6 +556,10 @@
             @include margin-auto;
             @include cursor-pointer;
 
+            &:hover img{
+                opacity: 0.7;
+            }
+
             .how-imgBox {
                 width: 232px;
                 height: 232px;
@@ -599,6 +615,7 @@
     @include full-width;
     height: 723px;
     @include margin-auto;
+    position: relative;
     background-color: #f5f5f5;
 
     h3 {
@@ -629,20 +646,26 @@
         }
     }
 
+    .swiper-pagination-bullet-active {
+        background-color: #333;
+    }
+
+    .yourSwiper-pagination {
+        margin-bottom: 10px;
+    }
+
     .yourSlider {
-        width: 1272px;
+        max-width: 1272px;
         height: 518px;
         @include margin-auto;
         margin-top: 2%;
-        overflow: hidden;
 
         .yourSwiper-wrapper {
-            width: 2640px;
             height: 100%;
             display: flex;
 
             .your-slide {
-                width: 264px;
+                width: 264px !important;
                 height: 478px;
                 margin-right: 20px;
                 display: flex;
@@ -652,6 +675,8 @@
                 border-radius: 10px;
                 box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
                 @include cursor-pointer;
+
+
 
                 img {
                     width: 247px;
@@ -762,18 +787,32 @@
             }
         }
     }
+
+    .yourSwiper-button-next,
+    .yourSwiper-button-prev {
+        position: absolute;
+        top: 57%;
+        color: #585858;
+    }
+
+    .yourSwiper-button-next {
+        right: 13%;
+    }
+
+    .yourSwiper-button-prev {
+        left: 13%;
+    }
 }
 
 // 프로젝트 베너
 .project-ban {
     @include full-width;
-    height: 427px;
-    @include margin-auto;
-    background-color: lightyellow;
+    height: 450px;
+    margin: 4% auto;
+    margin-bottom: 6%;
 
     h3 {
         text-align: center;
-        padding-top: 2%;
         margin-bottom: 1%;
 
         font: {
@@ -787,6 +826,51 @@
         text-align: center;
         position: relative;
         color: #999;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #333;
+    }
+
+    .projectSwiper {
+        width: 100%;
+        height: 324px;
+        margin-top: 2%;
+
+        .projectSwiper-slide {
+            display: flex;
+            justify-content: center;
+            @include cursor-pointer;
+
+            img {
+                width: 599px;
+                height: auto;
+            }
+        }
+    }
+
+    .projectSwiper-button-next,
+    .projectSwiper-button-prev{
+        width: 48px;
+        height: 48px;
+        color: #a3a3a3;
+        background-color: #ffffff9c;
+        border: 1px solid #eee;
+        border-radius: 50%;
+        box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+    }
+    
+    .projectSwiper-button-next{
+        right: 33%;
+    }
+    .projectSwiper-button-prev{
+        left: 33%;
+    }
+
+    .projectSwiper-button-next::after,
+    .projectSwiper-button-prev::after{
+        font-size: 25px;
+        text-align: center
     }
 }
 

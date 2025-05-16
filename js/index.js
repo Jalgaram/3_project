@@ -36,14 +36,14 @@ swiper.on('slideChangeTransitionEnd', () => {
 newprev = () => {
   $('.new-wrapper .new-slide:last').prependTo('.new-wrapper');
   $('.new-wrapper').css('margin-left', -318);
-  $('.new-wrapper').stop().animate({marginLeft: 0}, 800);
+  $('.new-wrapper').stop().animate({ marginLeft: 0 }, 800);
 }
 
 newnext = () => {
-   $('.new-wrapper').stop().animate({marginLeft: -318}, 800, () => {
+  $('.new-wrapper').stop().animate({ marginLeft: -318 }, 800, () => {
     $('.new-wrapper .new-slide:first').appendTo('.new-wrapper');
     $('.new-wrapper').css({ marginLeft: 0 });
-   });
+  });
 }
 
 setInterval(newnext, 6000);
@@ -53,6 +53,23 @@ $('.new-prev').click(function () {
 });
 $('.new-next').click(function () {
   newnext();
+});
+
+// 프로젝트 슬라이더
+var projectSwiper = new Swiper(".projectSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".projectSwiper-button-next",
+    prevEl: ".projectSwiper-button-prev",
+  },
+  pagination: {
+    el: ".projectSwiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
 });
 
 // 공지사항 슬라이더

@@ -112,7 +112,7 @@ const yours = [
     }
 ];
 
-const yourlist = document.getElementById('yourSwiper');
+const yourlist = document.getElementById('yourSwiperWrapper');
 
 truncateYourText = (text, maxLength) => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
@@ -120,33 +120,45 @@ truncateYourText = (text, maxLength) => {
 
 yours.forEach(r => {
     const div = document.createElement('div');
-
+    div.classList.add('your-slide', 'swiper-slide')
     div.innerHTML = `
-        <div class="your-slide">
-            <img src="${r.img}" alt="타인의 책장">
+         <img src="${r.img}" alt="타인의 책장">
 
-            <div class="your-box">
-                <p class="your-title">${truncateYourText(r.reivewTitle, 21)}</p>
-                <p class="your-text">${r.text1}</p>
-                <p class="your-user">
-                    <span class="user-icon"><i class="fi fi-sr-user"></i></span> ${r.user}
-                </p>
-                <p class="your-date">${r.date}</p>
+        <div class="your-box">
+            <p class="your-title">${truncateYourText(r.reivewTitle, 21)}</p>
+            <p class="your-text">${r.text1}</p>
+            <p class="your-user">
+                <span class="user-icon"><i class="fi fi-sr-user"></i></span> ${r.user}
+            </p>
+            <p class="your-date">${r.date}</p>
 
-                <hr>
+            <hr>
 
-                <div class="your-Book">
-                    <img src="${r.bookImg}">
+            <div class="your-Book">
+                <img src="${r.bookImg}">
 
-                    <div class="your-book-textWrap">
-                        <h5>${truncateYourText(r.bookTitle, 17)}</h5>
+                <div class="your-book-textWrap">
+                    <h5>${truncateYourText(r.bookTitle, 17)}</h5>
 
-                        <p><span><i class="fi fi-sr-star"></i></span> ${r.score}</p>
-                    </div>
+                    <p><span><i class="fi fi-sr-star"></i></span> ${r.score}</p>
                 </div>
             </div>
         </div>
     `;
 
     yourlist.appendChild(div);
+});
+
+const yourwiper = new Swiper(".yourSlider", {
+    slidesPerView: 4.5,
+    slidesPerGroup: 1,
+    navigation: {
+        nextEl: ".yourSwiper-button-next",
+        prevEl: ".yourSwiper-button-prev",
+    },
+    pagination: {
+        el: ".yourSwiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
 });

@@ -219,7 +219,7 @@ footer {
   padding: 5% 0;
 }
 
-.swiper-slideWrap {
+.myswiper {
   width: 1300px;
   height: 600px;
   margin: 0 auto;
@@ -227,16 +227,16 @@ footer {
   position: relative;
   overflow: hidden;
 }
-.swiper-slideWrap:hover .swiper-button-next,
-.swiper-slideWrap:hover .swiper-button-prev {
+.myswiper:hover .swiper-button-next,
+.myswiper:hover .swiper-button-prev {
   opacity: 1;
   pointer-events: auto;
 }
-.swiper-slideWrap .swiper-wrapper {
+.myswiper .myswiper-wrapper {
   width: 5120px;
   height: 100%;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide {
+.myswiper .myswiper-wrapper .myswiper-slide {
   width: 1280px;
   height: 100%;
   padding: 0 1%;
@@ -245,27 +245,27 @@ footer {
   align-items: center;
   cursor: pointer;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox {
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox {
   padding-left: 1%;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox p,
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox span,
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox .more {
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox p,
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox span,
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox .more {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox p {
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox p {
   font-size: 20px;
   line-height: 50px;
   transition-delay: 0.1s;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox span {
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox span {
   font-size: 38px;
   font-weight: 700;
   transition-delay: 0.3s;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide .swiper-fontbox .more {
+.myswiper .myswiper-wrapper .myswiper-slide .swiper-fontbox .more {
   width: 70px;
   text-align: center;
   margin-top: 25px;
@@ -276,25 +276,25 @@ footer {
   border-radius: 15px;
   transition-delay: 0.5s;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide img {
+.myswiper .myswiper-wrapper .myswiper-slide img {
   width: 390px;
   height: auto;
 }
-.swiper-slideWrap .swiper-wrapper .swiper-slide.active .swiper-fontbox p, .swiper-slideWrap .swiper-wrapper .swiper-slide.active .swiper-fontbox span, .swiper-slideWrap .swiper-wrapper .swiper-slide.active .swiper-fontbox .more {
+.myswiper .myswiper-wrapper .myswiper-slide.active .swiper-fontbox p, .myswiper .myswiper-wrapper .myswiper-slide.active .swiper-fontbox span, .myswiper .myswiper-wrapper .myswiper-slide.active .swiper-fontbox .more {
   opacity: 1;
   transform: translateY(0);
 }
-.swiper-slideWrap .swiper-button-next,
-.swiper-slideWrap .swiper-button-prev {
+.myswiper .myswiper-button-next,
+.myswiper .myswiper-button-prev {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
 }
-.swiper-slideWrap .swiper-button-next,
-.swiper-slideWrap .swiper-button-prev::after {
+.myswiper .myswiper-button-next,
+.myswiper .myswiper-button-prev::after {
   color: #444;
 }
-.swiper-slideWrap .swiper-pagination {
+.myswiper .myswiper-button-pagination {
   color: #222;
 }
 
@@ -398,6 +398,9 @@ footer {
   box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
   cursor: pointer;
 }
+.new-book .newSwiper .new-wrapper .new-slide:hover img {
+  opacity: 0.7;
+}
 .new-book .newSwiper .new-wrapper .new-slide .new-imgBox {
   width: 282px;
   height: 282px;
@@ -482,6 +485,9 @@ footer {
   margin: 0 auto;
   cursor: pointer;
 }
+.best-book .bestWrap .bestBox:hover img {
+  opacity: 0.7;
+}
 .best-book .bestWrap .bestBox .best-imgBox {
   width: 298px;
   height: 298px;
@@ -558,6 +564,9 @@ footer {
   margin: 0 auto;
   cursor: pointer;
 }
+.hot-book .hotWrap .hotBox:hover img {
+  opacity: 0.7;
+}
 .hot-book .hotWrap .hotBox .hot-imgBox {
   width: 298px;
   height: 298px;
@@ -615,6 +624,9 @@ footer {
   margin: 0 auto;
   cursor: pointer;
 }
+.how-book .howWrap .howBox:hover img {
+  opacity: 0.7;
+}
 .how-book .howWrap .howBox .how-imgBox {
   width: 232px;
   height: 232px;
@@ -652,6 +664,7 @@ footer {
   max-width: 1912px;
   height: 723px;
   margin: 0 auto;
+  position: relative;
   background-color: #f5f5f5;
 }
 .your-book h3 {
@@ -676,20 +689,24 @@ footer {
   font-size: 15px;
   cursor: pointer;
 }
+.your-book .swiper-pagination-bullet-active {
+  background-color: #333;
+}
+.your-book .yourSwiper-pagination {
+  margin-bottom: 10px;
+}
 .your-book .yourSlider {
-  width: 1272px;
+  max-width: 1272px;
   height: 518px;
   margin: 0 auto;
   margin-top: 2%;
-  overflow: hidden;
 }
 .your-book .yourSlider .yourSwiper-wrapper {
-  width: 2640px;
   height: 100%;
   display: flex;
 }
 .your-book .yourSlider .yourSwiper-wrapper .your-slide {
-  width: 264px;
+  width: 264px !important;
   height: 478px;
   margin-right: 20px;
   display: flex;
@@ -782,16 +799,27 @@ footer {
   color: #f94830;
   font-size: 11px;
 }
+.your-book .yourSwiper-button-next,
+.your-book .yourSwiper-button-prev {
+  position: absolute;
+  top: 57%;
+  color: #585858;
+}
+.your-book .yourSwiper-button-next {
+  right: 13%;
+}
+.your-book .yourSwiper-button-prev {
+  left: 13%;
+}
 
 .project-ban {
   max-width: 1912px;
-  height: 427px;
-  margin: 0 auto;
-  background-color: lightyellow;
+  height: 450px;
+  margin: 4% auto;
+  margin-bottom: 6%;
 }
 .project-ban h3 {
   text-align: center;
-  padding-top: 2%;
   margin-bottom: 1%;
   font-size: 30px;
   font-weight: 500;
@@ -801,6 +829,44 @@ footer {
   text-align: center;
   position: relative;
   color: #999;
+}
+.project-ban .swiper-pagination-bullet-active {
+  background-color: #333;
+}
+.project-ban .projectSwiper {
+  width: 100%;
+  height: 324px;
+  margin-top: 2%;
+}
+.project-ban .projectSwiper .projectSwiper-slide {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.project-ban .projectSwiper .projectSwiper-slide img {
+  width: 599px;
+  height: auto;
+}
+.project-ban .projectSwiper-button-next,
+.project-ban .projectSwiper-button-prev {
+  width: 48px;
+  height: 48px;
+  color: #a3a3a3;
+  background-color: rgba(255, 255, 255, 0.6117647059);
+  border: 1px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+}
+.project-ban .projectSwiper-button-next {
+  right: 33%;
+}
+.project-ban .projectSwiper-button-prev {
+  left: 33%;
+}
+.project-ban .projectSwiper-button-next::after,
+.project-ban .projectSwiper-button-prev::after {
+  font-size: 25px;
+  text-align: center;
 }
 
 .notice1 {
