@@ -89,12 +89,12 @@ header .main-menu.fixed {
   background-color: #fffdff;
   border-bottom: 1px solid #ddd;
 }
-header .main-menu.fixed > div {
+header .main-menu.fixed div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .main-menu.fixed > div .main-nav1 ul img[alt=인디펍] {
+header .main-menu.fixed div .main-nav1 ul img[alt=인디펍] {
   display: block;
 }
 header .main-menu div {
