@@ -34,12 +34,24 @@ async function bestBookData(){
             const data = await fetchBooks(querys[i]);
 
             for(let j=0; j<Math.min(5, data.documents.length); j++){
-                $('.bestWrap').eq(j).append('<div class="bestBox"></div>');
-                const bestDiv = $('.bestWrap').eq(j).find('.bestBox').last();
-    
-                bestDiv.append('<div class="best-imgBox"><img src='+data.documents[j].thumbnail+'"></div>');
-                bestDiv.append('<p>'+data.documents[j].title+'</p>');
-                bestDiv.append('<h6>'+Number(data.documents[j].price).toLocaleString()+'원</h6>');
+
+                const boxHTML = `
+                    <div class="bestBox">
+                        <div class="best-imgBox">
+                            <img src="${data.documents[j].thumbnail}">
+
+                            <div class = "heartBox">
+                                <span><img src= "img/하트.png"></span>
+                                <span><img src= "img/쓰레기통.png"></span>
+                            </div>
+                        </div>
+
+                        <p>${data.documents[j].title}</p>
+                        <h6>${Number(data.documents[j].price).toLocaleString()}원</h6>
+                    </div>
+                `;
+
+                $('.bestWrap').eq(j).append(boxHTML);
             }
         }
     } catch (error){
@@ -57,12 +69,24 @@ async function hotBookData(){
             const data = await fetchBooks(querys[i]);
 
             for(let j=0; j<Math.min(9, data.documents.length); j++){
-                $('.hotWrap').eq(j).append('<div class="hotBox">');
-                const hotDiv = $('.hotWrap').eq(j).find('.hotBox').last();
 
-                hotDiv.append('<div class="hot-imgBox"><img src="'+data.documents[j].thumbnail+'"></div>');
-                hotDiv.append('<p>'+data.documents[j].title+'</p>');
-                hotDiv.append('<h6>'+Number(data.documents[j].price).toLocaleString()+'원</h6>');
+                const boxHTML = `
+                    <div class="hotBox">
+                        <div class="hot-imgBox">
+                            <img src = "${data.documents[j].thumbnail}">
+
+                             <div class = "heartBox">
+                                <span><img src= "img/하트.png"></span>
+                                <span><img src= "img/쓰레기통.png"></span>
+                            </div>
+                        </div>
+                        <p>${data.documents[j].title}</p>
+                        <h6>${Number(data.documents[j].price).toLocaleString()}원</h6>
+                    </div>
+                `;
+
+                $('.hotWrap').eq(j).append(boxHTML);
+
             }
         }
     } catch (error){

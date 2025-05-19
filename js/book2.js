@@ -30,7 +30,15 @@ async function newBookData(){
 
             const boxHTML = `
                 <div class="new-slide">
-                    <div class="new-imgBox"><img src="${book.thumbnail}"></div>
+                    <div class="new-imgBox">
+                        <img src="${book.thumbnail}">
+
+                         <div class = "heartBox">
+                            <span><img src= "img/하트.png"></span>
+                            <span><img src= "img/쓰레기통.png"></span>
+                        </div>
+                    </div>
+                    
                     <p>${book.title}</p>
                     <h6>${Number(book.price).toLocaleString()}원</h6>
                 </div>
@@ -55,7 +63,15 @@ async function howBookData() {
 
             const boxHTML = `
                 <div class="howBox">
-                    <div class="how-imgBox"><img src="${book.thumbnail}"></div>
+                    <div class="how-imgBox">
+                        <img src="${book.thumbnail}">
+
+                        <div class = "heartBox">
+                            <span><img src= "img/하트.png"></span>
+                            <span><img src= "img/쓰레기통.png"></span>
+                        </div>
+                    </div>
+
                     <p>${book.title}</p>
                     <h6>${Number(book.price).toLocaleString()}원</h6>
                 </div>

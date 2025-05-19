@@ -7,27 +7,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // MIXIN
-@mixin full-width{
+@mixin full-width {
     max-width: 1912px;
 }
-@mixin content-width{
+
+@mixin content-width {
     width: 1280px;
 }
-@mixin box-width{
+
+@mixin box-width {
     width: 1252px;
 }
-@mixin margin-auto{
+
+@mixin margin-auto {
     margin: 0 auto;
 }
-@mixin cursor-point{
+
+@mixin cursor-point {
     cursor: pointer;
 }
 
-*{
-    margin: 0; 
-    padding: 0; 
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    
+
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -35,12 +39,23 @@
     font-variation-settings: "wdth" 100;
 }
 
-ul, ol {text-decoration: none;}
-li{list-style: none;}
-a{text-decoration: none; @include cursor-point;}
+ul,
+ol {
+    text-decoration: none;
+}
 
-#wrap{
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    @include cursor-point;
+}
+
+#wrap {
     width: 100%;
+
     margin: {
         bottom: 1.3%;
     }
@@ -48,36 +63,38 @@ a{text-decoration: none; @include cursor-point;}
 
 
 // 헤더 + 메뉴바
-header{
+header {
     @include full-width;
     height: 170px;
     @include margin-auto;
 
-    .up-header{
+    .up-header {
         @include content-width;
         height: 100px;
         @include margin-auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 15px;
         background-color: #fff;
 
-        img{
+        img {
             width: 102px;
             height: auto;
+            margin-left: 30%;
         }
 
-        div{
+        div {
             display: flex;
 
-            ul{
+            ul {
                 display: flex;
 
-                li{
+                li {
                     margin: 0 10px;
-                     a{
+
+                    a {
                         color: #999;
+
                         font: {
                             size: 14px;
                         }
@@ -85,7 +102,7 @@ header{
                 }
             }
 
-            select{
+            select {
                 width: 95px;
                 height: 28px;
                 margin-left: 10px;
@@ -98,46 +115,85 @@ header{
         }
     }
 
-    .main-menu{
+    .main-menu {
         @include full-width;
         height: 70px;
         @include margin-auto;
+        position: relative;
 
-       div{
-        @include content-width;
-        height: 100%;
-        display: flex;
-        @include margin-auto;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #fffdff;
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 999;
+            height: 70px;
+            background-color: #fffdff;
 
-            img[alt="메뉴"]{
+            border: {
+                bottom: 1px solid #ddd;
+            }
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .main-nav1 ul {
+                    img[alt="인디펍"] {
+                        display: block
+                    }
+                }
+            }
+        }
+
+        div {
+            @include content-width;
+            height: 100%;
+            display: flex;
+            @include margin-auto;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fffdff;
+
+            img[alt="메뉴"] {
                 width: 32px;
                 height: auto
             }
 
-            img{
+            img {
                 width: 30px;
                 height: auto;
             }
 
-            .main-nav1 > ul,
-            .main-nav2 > ul{
-                display: flex
+            .main-nav1>ul,
+            .main-nav2>ul {
+                display: flex;
+                align-items: center;
             }
 
-            .main-nav1{
-                li:first-child{
+            .main-nav1 {
+
+                ul {
+                    img[alt="인디펍"] {
+                        width: 80px;
+                        display: none;
+                    }
+                }
+
+                li:first-child {
                     margin-right: 15px;
                 }
-                li:not(:first-child){
-                    margin: 0 15px;
 
+                li:not(:first-child) {
+                    margin: 0 15px;
                 }
 
-                a{
+                a {
                     color: #222;
+                    display: flex;
+                    align-items: center;
+
                     font: {
                         weight: 500;
                         size: 18px
@@ -145,29 +201,30 @@ header{
                 }
             }
 
-            .main-nav2{
-                li{
+            .main-nav2 {
+                li {
                     margin: 0 10px;
                 }
-                li:last-child{
+
+                li:last-child {
                     margin-right: 0px;
                 }
             }
-       }
+        }
     }
 }
 
 
 
 // 푸터
-footer{
+footer {
     @include full-width;
     height: 320px;
     @include margin-auto;
     background-color: #012748;
 }
 
-.footerContent{
+.footerContent {
     $boxheight: 190px;
     $fontColor: #fff;
 
@@ -178,7 +235,7 @@ footer{
     align-items: center;
 
     // 회사소개 등등
-    .footerBox1{
+    .footerBox1 {
         width: 788px;
         height: $boxheight;
         padding: 0 10% 0 0;
@@ -186,24 +243,26 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
 
-        a, span, p{
+        a,
+        span,
+        p {
             color: $fontColor;
         }
 
 
-        .footerNav > ul{
+        .footerNav>ul {
             display: flex;
 
-            li{
+            li {
                 margin-right: 10px;
                 text-align: center;
 
-                span{
+                span {
                     font-weight: 700;
                 }
             }
 
-            li:not(:last-child)::after{
+            li:not(:last-child)::after {
                 content: "|";
                 margin-left: 10px;
                 color: $fontColor;
@@ -211,45 +270,52 @@ footer{
             }
         }
 
-        .footerText1{
+        .footerText1 {
             font-size: 14px;
             line-height: 1.5;
 
-            span:not(:last-child)::after{
+            span:not(:last-child)::after {
                 content: "|";
                 color: $fontColor;
                 font-size: 13px;
                 margin-left: 5px;
             }
         }
-        
-        .footerText2{font-size: 11px;}
+
+        .footerText2 {
+            font-size: 11px;
+        }
 
     }
 
     // 고객센터
-    .footerBox2{
+    .footerBox2 {
         width: 262px;
         height: $boxheight;
+
         padding: {
             right: 3%;
         }
 
-        img[alt="인스타"]{
+        img[alt="인스타"] {
             width: 22px;
             height: 22px;
         }
 
-        p, ul>li, a{color: $fontColor;}
+        p,
+        ul>li,
+        a {
+            color: $fontColor;
+        }
 
-        p{
+        p {
             font: {
                 size: 18px;
                 weight: 800;
             }
         }
 
-        a{
+        a {
             font-size: 23px;
 
             margin: {
@@ -262,34 +328,37 @@ footer{
             gap: 8px;
         }
 
-        li:last-child{
+        li:last-child {
             font-size: 12.7px;
         }
 
     }
 
     // 커뮤니티
-    .footerBox3{
+    .footerBox3 {
         width: 200px;
         height: $boxheight;
 
-        p, a{color: $fontColor;}
+        p,
+        a {
+            color: $fontColor;
+        }
 
-        p{
+        p {
             font: {
                 size: 18px;
                 weight: 800;
             }
         }
 
-        .footerBox3-menu{
+        .footerBox3-menu {
             display: flex;
             justify-content: space-between;
             margin: 5% 0;
             padding-right: 22%;
             font-size: 14px;
 
-            li{
+            li {
                 padding: 5% 0;
             }
         }

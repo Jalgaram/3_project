@@ -122,8 +122,10 @@ yours.forEach(r => {
     const div = document.createElement('div');
     div.classList.add('your-slide', 'swiper-slide')
     div.innerHTML = `
-         <img src="${r.img}" alt="타인의 책장">
-
+        <div class="your-imgwrap">
+            <img src="${r.img}" alt="타인의 책장">
+        </div>
+        
         <div class="your-box">
             <p class="your-title">${truncateYourText(r.reivewTitle, 21)}</p>
             <p class="your-text">${r.text1}</p>
@@ -153,8 +155,8 @@ const yourwiper = new Swiper(".yourSlider", {
     slidesPerView: 4.5,
     slidesPerGroup: 1,
     autoplay: {
-    delay: 8000,
-    disableOnInteraction: false,
+        delay: 8000,
+        disableOnInteraction: false,
     },
     navigation: {
         nextEl: ".yourSwiper-button-next",

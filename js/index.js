@@ -1,3 +1,93 @@
+// 글씨 에니메이션1
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle1 = document.querySelector('.new-book h3');
+observer1.observe(newTitle1);
+
+// 글씨 에니메이션2
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle2 = document.querySelector('.best-book h3');
+observer2.observe(newTitle2);
+
+// 글씨 에니메이션3
+const observer3 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle3 = document.querySelector('.hot-book h3');
+observer3.observe(newTitle3);
+
+// 글씨 에니메이션4
+const observer4 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle4 = document.querySelector('.how-book h3');
+observer4.observe(newTitle4);
+
+// 글씨 에니메이션5
+const observer5 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle5 = document.querySelector('.your-book h3');
+observer5.observe(newTitle5);
+
+const pElem1 = document.querySelector('.your-book p');
+observer5.observe(pElem1);
+
+// 글씨 에니메이션6
+const observer6 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+const newTitle6 = document.querySelector('.project-ban h3');
+observer6.observe(newTitle6);
+
+const pElem2 = document.querySelector('.project-ban p');
+observer6.observe(pElem2);
+
 // 슬라이더
 var swiper = new Swiper(".swiper-slideWrap", {
   spaceBetween: 30,
@@ -54,6 +144,7 @@ $('.new-prev').click(function () {
 $('.new-next').click(function () {
   newnext();
 });
+
 
 // 프로젝트 슬라이더
 var projectSwiper = new Swiper(".projectSwiper", {
