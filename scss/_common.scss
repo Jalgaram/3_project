@@ -55,10 +55,6 @@ a {
 
 #wrap {
     width: 100%;
-
-    margin: {
-        bottom: 1.3%;
-    }
 }
 
 
@@ -119,40 +115,6 @@ header {
         @include full-width;
         height: 70px;
         @include margin-auto;
-        position: relative;
-
-        &.fixed {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            margin: 0 auto;
-            z-index: 999;
-            height: 70px;
-            background-color: #fffdff;
-
-            border: {
-                bottom: 1px solid #ddd;
-            }
-
-            div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .main-nav1 ul {
-                    img[alt="인디펍"] {
-                        display: block
-                    }
-
-                    .menuLi1 .menuBox,
-                    .menuLi2  .menuBox{
-                        top: 30px;
-                    }
-                }
-            }
-
-
-        }
 
         div {
             @include content-width;
@@ -389,8 +351,6 @@ header {
         }
     }
 }
-
-
 
 // 푸터
 footer {

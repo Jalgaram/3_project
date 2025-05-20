@@ -35,7 +35,7 @@ async function newBookData(){
 
                          <div class = "heartBox">
                             <span><img src= "img/하트.png"></span>
-                            <span><img src= "img/쓰레기통.png"></span>
+                            <span><img src= "img/장바구니.png"></span>
                         </div>
                     </div>
                     
@@ -68,7 +68,7 @@ async function howBookData() {
 
                         <div class = "heartBox">
                             <span><img src= "img/하트.png"></span>
-                            <span><img src= "img/쓰레기통.png"></span>
+                            <span><img src= "img/장바구니.png"></span>
                         </div>
                     </div>
 

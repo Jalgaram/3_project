@@ -42,7 +42,7 @@ async function bestBookData(){
 
                             <div class = "heartBox">
                                 <span><img src= "img/하트.png"></span>
-                                <span><img src= "img/쓰레기통.png"></span>
+                                <span><img src= "img/장바구니.png"></span>
                             </div>
                         </div>
 
@@ -77,7 +77,7 @@ async function hotBookData(){
 
                              <div class = "heartBox">
                                 <span><img src= "img/하트.png"></span>
-                                <span><img src= "img/쓰레기통.png"></span>
+                                <span><img src= "img/장바구니.png"></span>
                             </div>
                         </div>
                         <p>${data.documents[j].title}</p>

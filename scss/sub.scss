@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import "common";
+
+// MIXIN
+@mixin full-width {
+    max-width: 1912px;
+}
+
+@mixin content-width {
+    width: 1280px;
+}
+
+@mixin margin-auto {
+    margin: 0 auto;
+}
+
+@mixin cursor-pointer {
+    cursor: pointer;
+}
+
+// 헤더
+header {
+    .main-menu {
+        border: {
+            bottom: 1px solid #ddd;
+        }
+    }
+}
+
+// 컨텐츠
+#contents{
+    @include full-width;
+    height: 4950px;
+    @include margin-auto;
+
+    .book_wrap{
+        @include content-width;
+        height: 100%;
+        @include margin-auto;
+        background-color: lightgoldenrodyellow;
+
+        .detail{
+            width: 1252px;
+            height: 838px;
+            margin: 60px auto;
+            background-color: #fff;
+
+            .bigImgBox{
+                width: 642px;
+                height: 624px;
+                background-color: #fafafa;
+                border-radius: 15px;
+            }
+        }
+
+        .item{
+            width: 1252px;
+            height: 300px;
+            @include margin-auto;
+            background-color: lightcyan;
+        }
+    }
+}

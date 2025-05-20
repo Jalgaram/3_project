@@ -18,6 +18,44 @@
     cursor: pointer;
 }
 
+// 헤더
+header{
+    .main-menu{
+         position: relative;
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 999;
+            height: 70px;
+            background-color: #fffdff;
+
+            border: {
+                bottom: 1px solid #ddd;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .main-nav1 ul {
+                    img[alt="인디펍"] {
+                        display: block
+                    }
+
+                    .menuLi1 .menuBox,
+                    .menuLi2  .menuBox{
+                        top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // 슬라이드
 .myswiper {
     width: 1300px;

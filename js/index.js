@@ -88,6 +88,18 @@ observer6.observe(newTitle6);
 const pElem2 = document.querySelector('.project-ban p');
 observer6.observe(pElem2);
 
+//메뉴바 고정
+const mainMenu = document.querySelector('.main-menu');
+const logo = document.querySelector('.main-nav1 ul img[alt="인디펍"]')
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 100){
+        mainMenu.classList.add('fixed');
+    } else {
+        mainMenu.classList.remove('fixed');
+    }
+});
+
 // 슬라이더
 var swiper = new Swiper(".swiper-slideWrap", {
   spaceBetween: 30,
