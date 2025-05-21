@@ -183,10 +183,10 @@ reviews.forEach(r => {
                 <p class="review-text2">
                     <span class="star">
                         <i class="fi fi-sr-star"></i>
-                            <i class="fi fi-sr-star"></i>
-                            <i class="fi fi-sr-star"></i>
-                            <i class="fi fi-sr-star"></i>
-                            <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
+                        <i class="fi fi-sr-star"></i>
                     </span>
                     ${r.user} ${r.date} 
                 </p>

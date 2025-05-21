@@ -375,25 +375,163 @@ header .main-menu {
   height: 4950px;
   margin: 0 auto;
 }
-#contents .book_wrap {
+#contents .bookDetail_wrap {
   width: 1280px;
   height: 100%;
   margin: 0 auto;
   background-color: lightgoldenrodyellow;
 }
-#contents .book_wrap .detail {
+#contents .bookDetail_wrap .detail {
   width: 1252px;
-  height: 838px;
+  height: 624px;
   margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
 }
-#contents .book_wrap .detail .bigImgBox {
+#contents .bookDetail_wrap .detail .bigImgBox {
   width: 642px;
-  height: 624px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fafafa;
   border-radius: 15px;
 }
-#contents .book_wrap .item {
+#contents .bookDetail_wrap .detail .bigImgBox img {
+  width: 400px;
+  height: auto;
+}
+#contents .bookDetail_wrap .detail .detail_font {
+  width: 510px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#contents .bookDetail_wrap .detail .detail_font h3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+}
+#contents .bookDetail_wrap .detail .detail_font span {
+  position: relative;
+  font-size: 14px;
+  padding: 10px 0;
+  line-height: 30px;
+  cursor: pointer;
+}
+#contents .bookDetail_wrap .detail .detail_font span .fi-sr-star {
+  color: #ddd;
+}
+#contents .bookDetail_wrap .detail .detail_font span .fi-rs-heart,
+#contents .bookDetail_wrap .detail .detail_font span .fi-rs-share {
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  color: #555;
+}
+#contents .bookDetail_wrap .detail .detail_font span .fi-rs-share {
+  right: 2%;
+}
+#contents .bookDetail_wrap .detail .detail_font span .fi-rs-heart {
+  right: 10%;
+}
+#contents .bookDetail_wrap .detail .detail_font hr {
+  border-top: 1px solid #ddd;
+}
+#contents .bookDetail_wrap .detail .detail_font table tr {
+  text-align: left;
+  font-size: 13px;
+  line-height: 30px;
+  color: #555;
+}
+#contents .bookDetail_wrap .detail .detail_font table tr h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #18a9f1;
+}
+#contents .bookDetail_wrap .detail .detail_font .total {
+  height: 72px;
+  background-color: #fafafa;
+  padding: 0 15px;
+}
+#contents .bookDetail_wrap .detail .detail_font .total tr {
+  color: #000;
+}
+#contents .bookDetail_wrap .detail .detail_font .total tr h4 {
+  color: #000;
+}
+#contents .bookDetail_wrap .detail .detail_font .total tr span {
+  width: 103px;
+  padding: 0;
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #fff;
+}
+#contents .bookDetail_wrap .detail .detail_font .total tr span input {
+  width: 45px;
+  height: 28px;
+  border: none;
+  text-align: center;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  font-weight: 500;
+  font-size: 14px;
+}
+#contents .bookDetail_wrap .detail .detail_font .total tr span .fi-rs-minus-small,
+#contents .bookDetail_wrap .detail .detail_font .total tr span .fi-rs-plus-small {
+  font-size: 15px;
+  line-height: 15px;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm {
+  width: 100%;
+  height: 87px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm span {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm span .fi-ts-shipping-fast {
+  font-size: 20px;
+  line-height: 0px;
+  color: #fff;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm p {
+  font-size: 13px;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm p b {
+  font-weight: 500;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm2 {
+  width: 100%;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm2 p {
+  font-size: 13px;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm2 p span {
+  color: #888;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm2 p .fi-rs-interrogation {
+  font-size: 14px;
+  cursor: pointer;
+}
+#contents .bookDetail_wrap .item {
   width: 1252px;
   height: 300px;
   margin: 0 auto;

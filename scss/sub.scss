@@ -28,32 +28,215 @@ header {
 }
 
 // 컨텐츠
-#contents{
+#contents {
     @include full-width;
     height: 4950px;
     @include margin-auto;
 
-    .book_wrap{
+    .bookDetail_wrap {
         @include content-width;
         height: 100%;
         @include margin-auto;
         background-color: lightgoldenrodyellow;
 
-        .detail{
+        .detail {
             width: 1252px;
-            height: 838px;
+            height: 624px;
             margin: 60px auto;
+            display: flex;
+            justify-content: space-between;
             background-color: #fff;
 
-            .bigImgBox{
+            .bigImgBox {
                 width: 642px;
-                height: 624px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: #fafafa;
                 border-radius: 15px;
+
+                img {
+                    width: 400px;
+                    height: auto;
+                }
+            }
+
+            .detail_font {
+                width: 510px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+
+                h3 {
+                    font: {
+                        size: 25px;
+                        weight: 700;
+                    }
+
+                    line-height: 30px;
+                }
+
+                span {
+                    position: relative;
+                    font-size: 14px;
+                    padding: 10px 0;
+                    line-height: 30px;
+                    @include cursor-pointer;
+
+
+                    .fi-sr-star {
+                        color: #ddd;
+                    }
+
+                    .fi-rs-heart,
+                    .fi-rs-share {
+                        position: absolute;
+                        top: 10px;
+                        font-size: 24px;
+                        color: #555;
+                    }
+
+                    .fi-rs-share {
+                        right: 2%;
+                    }
+
+                    .fi-rs-heart {
+                        right: 10%;
+                    }
+
+                }
+
+                hr {
+                    border: {
+                        top: 1px solid #ddd;
+                    }
+                }
+
+                table {
+                    tr {
+                        text-align: left;
+                        font-size: 13px;
+                        line-height: 30px;
+                        color: #555;
+
+                        h4 {
+                            font: {
+                                size: 14px;
+                                weight: 600;
+                            }
+
+                            color: #18a9f1;
+                            ;
+                        }
+                    }
+                }
+
+                .total {
+                    height: 72px;
+                    background-color: #fafafa;
+                    padding: 0 15px;
+
+                    tr {
+                        color: #000;
+
+                        h4 {
+                            color: #000;
+                        }
+
+                        span {
+                            width: 103px;
+                            padding: 0;
+                            height: 30px;
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 8px;
+                            background-color: #fff;
+
+                            input {
+                                width: 45px;
+                                height: 28px;
+                                border: none;
+                                text-align: center;
+
+                                border: {
+                                    right: 1px solid #e5e5e5;
+                                    left: 1px solid #e5e5e5;
+                                }
+
+                                font: {
+                                    weight: 500;
+                                    size: 14px;
+                                }
+                            }
+
+                            .fi-rs-minus-small,
+                            .fi-rs-plus-small {
+                                font-size: 15px;
+                                line-height: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .dm {
+                    width: 100%;
+                    height: 87px;
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    background-color: #fff;
+                    border: 1px solid #e5e5e5;
+
+                    span {
+                        width: 42px;
+                        height: 42px;
+                        padding: 0;
+                        margin-right: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #aaa;
+                        border-radius: 50%;
+
+                        .fi-ts-shipping-fast {
+                            font-size: 20px;
+                            line-height: 0px;
+                            color: #fff;
+                        }
+                    }
+
+                    p{
+                        font-size: 13px;
+
+                        b{
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .dm2{
+                    width: 100%;
+
+                    p{
+                        font-size: 13px;
+
+                        span{
+                            color: #888;
+                        }
+                        .fi-rs-interrogation{
+                            font-size: 14px;
+                            @include cursor-pointer;
+                        }
+                    }
+                }
             }
         }
 
-        .item{
+        .item {
             width: 1252px;
             height: 300px;
             @include margin-auto;
