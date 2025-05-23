@@ -96,6 +96,20 @@ async function detailBookData() {
                         <div class="dm2">
                             <p>무이자 할부 <span>|</span> 카드 자세히 보기 <i class="fi fi-rs-interrogation"></i></p>
                         </div>
+
+                        <div class="dm3">
+                            <p>총 상품금액 <span>${Number(data.documents[j].sale_price).toLocaleString()}원</span><span class="dm3span"> (1개)</span></p>
+                        </div>
+
+                        <div class="dmBtn">
+                            <button class="dmBtn1">
+                                <i class="fi fi-bs-shopping-cart"></i> 장바구니
+                            </button>
+
+                            <button class="dmBtn2">
+                                <i class="fi fi-rr-check"></i> 바로 구매
+                            </button>
+                        </div>
                      </div>
                 `;
 

@@ -18,6 +18,13 @@
     cursor: pointer;
 }
 
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // 헤더
 header {
     .main-menu {
@@ -67,7 +74,7 @@ header {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
+                justify-content: space-around;
 
                 h3 {
                     font: {
@@ -209,38 +216,209 @@ header {
                         }
                     }
 
-                    p{
+                    p {
                         font-size: 13px;
 
-                        b{
+                        b {
                             font-weight: 500;
                         }
                     }
                 }
 
-                .dm2{
+                .dm2 {
                     width: 100%;
 
-                    p{
+                    p {
                         font-size: 13px;
 
-                        span{
+                        span {
                             color: #888;
                         }
-                        .fi-rs-interrogation{
-                            font-size: 14px;
+
+                        .fi-rs-interrogation {
+                            font-size: 12px;
                             @include cursor-pointer;
                         }
+                    }
+                }
+
+                .dm3 {
+                    padding: 10px 0;
+
+                    p {
+                        font-size: 15px;
+                        text-align: right;
+
+                        span {
+                            font: {
+                                size: 20px;
+                                weight: 700;
+                            }
+                        }
+
+                        .dm3span {
+                            font: {
+                                size: 14px;
+                                weight: 500;
+                            }
+
+                            color: #7d7d7d;
+                        }
+                    }
+                }
+
+                .dmBtn {
+                    text-align: right;
+                    height: 58px;
+
+                    .dmBtn1 {
+                        width: 219px;
+                        height: 100%;
+                        color: #555;
+
+                        font: {
+                            size: 17px;
+                            weight: 500;
+                        }
+
+                        text-align: center;
+                        background-color: #fff;
+                        border: 1px solid #c7c7c7;
+                        border-radius: 8px;
+                        @include cursor-pointer;
+
+                        &:hover {
+                            border: 1px solid #000;
+                        }
+
+                        .fi-ts-shopping-cart {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .dmBtn2 {
+                        width: 284px;
+                        height: 100%;
+
+                        font: {
+                            size: 17px;
+                            weight: 500;
+                        }
+
+                        text-align: center;
+                        background-color: #012748;
+                        color: #fff;
+                        border: none;
+                        border-radius: 8px;
+                        @include cursor-pointer;
                     }
                 }
             }
         }
 
-        .item {
+        .suggest {
             width: 1252px;
             height: 300px;
             @include margin-auto;
-            background-color: lightcyan;
+            position: relative;
+            background-color: #fff;
+
+            p {
+                font: {
+                    family: 'S-CoreDream-3Light';
+                    weight: 900;
+                }
+
+            }
+
+            .suggest-swiper {
+                width: 1252px;
+                height: 100%;
+                overflow: hidden;
+
+                .suggest-wrapper {
+                    width: 5500px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .suggest-slide {
+                        width: 160px;
+                        height: 230px;
+                        margin-right: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        @include cursor-pointer;
+
+                        .suggest-imgBox {
+                            width: 100%;
+                            height: 160px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #fafafa;
+
+                            img {
+                                width: 85px;
+                                height: auto;
+                            }
+                        }
+
+                        p {
+                            font: {
+                                family: "Noto Sans", sans-serif;
+                                size: 13px;
+                                weight: 400;
+                            }
+
+                            padding: 0 10px;
+
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        h6 {
+                            padding: 0 10px;
+
+                            font: {
+                                size: 13px;
+                                weight: 500;
+                            }
+
+                            color: #18a9f1;
+                        }
+                    }
+                }
+            }
+
+            .suggest-prevBox,
+            .suggest-nextBox {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                background-color: #ffffff9c;
+                border: 1px solid #eee;
+                border-radius: 50%;
+                box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+
+                .suggest-prev,
+                .suggest-next {
+                    font-size: 20px;
+                    color: #a3a3a3;
+                    line-height: 0;
+                }
+            }
+            .suggest-nextBox{
+                    right: 0;
+            }
         }
     }
 }
