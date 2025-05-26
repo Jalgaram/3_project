@@ -23,7 +23,7 @@ async function fetchBooks(query) {
 // 서브 디테일 북
 async function detailBookData() {
     try {
-        const querys = ['푸바오, 매일매일 행복해'];
+        const querys = ['전지적 푸바오 시점: 아이러푸 에디션'];
 
         for (let i = 0; i < querys.length; i++) {
             const data = await fetchBooks(querys[i]);
@@ -32,7 +32,7 @@ async function detailBookData() {
 
                 const boxHTML = `
                      <div class="bigImgBox">
-                        <img src = "./img/푸바오.jpg">
+                        <img src = "./img/푸바오.jpeg">
                      </div>
 
                      <div class= "detail_font">
@@ -73,7 +73,7 @@ async function detailBookData() {
 
                         <table class="total">
                             <tr>
-                                <td>푸바오, 매일매일 행복해</td>
+                                <td>${data.documents[j].title}</td>
                                 <td>
                                     <span>
                                         <i class="fi fi-rs-minus-small"></i>
@@ -86,10 +86,10 @@ async function detailBookData() {
                         </table>
 
                         <div class= "dm">
-                            <span><i class="fi fi-ts-shipping-fast"></i></span>
+                            <span class="dmpan1"><i class="fi fi-ts-shipping-fast"></i></span>
                             <p>
                                 <b>내일 출발하게요!<br></b>
-                                오늘출발 14:00 마감
+                                오늘출발 <span class="dmpan2">14:00</span> 마감
                             </p>
                         </div>
 
@@ -122,3 +122,34 @@ async function detailBookData() {
     }
 }
 detailBookData();
+
+$(document).on('click', '.fi-rs-minus-small', function(){
+    const $input = $(this).siblings('input');
+    let count = parseInt($input.val());
+
+    if(count > 1){
+        count--;
+        $input.val(count);
+        updateTotal($(this).closest('.detail_font'), count);
+    }
+});
+
+$(document).on('click', '.fi-rs-plus-small', function(){
+    const $input = $(this).siblings('input');
+    let count = parseInt($input.val());
+    
+    count++;
+    $input.val(count);
+    updateTotal($(this).closest('.detail_font'), count);
+});
+
+function updateTotal($context, count){
+    const unitPrice = parseInt(
+        $context.find('table:not(.total) h4').text().replace(/[^0-9]/g, '')
+    );
+        const totalPrice = unitPrice * count;
+
+        $context.find('.total h4').text(`${totalPrice.toLocaleString()}원`);
+        $context.find('.dm3 span').first().text(`${totalPrice.toLocaleString()}원`);
+        $context.find('.dm3span').text(`(${count}개)`);
+}

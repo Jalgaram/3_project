@@ -25,7 +25,7 @@ async function suggestBookData() {
     try {
         const data = await fetchBooks2('에세이');
 
-        for (let j = 0; j < Math.min(29, data.documents.length); j++) {
+        for (let j = 0; j < Math.min(28, data.documents.length); j++) {
             const book = data.documents[j];
 
             const boxHTML = `
@@ -44,18 +44,36 @@ async function suggestBookData() {
         }
 
         // 슬라이드
+        const slidesPerPage = 7;
+        const slideWidth = 160 + 20;
+        const pageWidth = slidesPerPage * slideWidth;
+        let currentPage = 0;
+
+        const totalSlide = $('.suggest-slide').length;
+        const totalPage = Math.ceil(totalSlide / slidesPerPage);
+
+        $('.suggest-wrapper').css({
+            width: `${slideWidth * totalSlide}px`
+        });
+
         $('.suggest-prevBox').click(() => {
-            $('.suggest-wrapper .suggest-slide:last').prependTo('.suggest-wrapper');
-            $('.suggest-wrapper').css('margin-legt', -1260);
-            $('.suggest-wrapper').stop().animate({ marginLeft: 0 }, 800);
+            if(currentPage > 0){
+                currentPage--;
+                $('.suggest-wrapper').stop().animate({
+                    marginLeft: `-${pageWidth * currentPage}px`
+                }, 800);
+            }
         });
 
         $('.suggest-nextBox').click(() => {
-            $('.suggest-wrapper').stop().animate({ marginLeft: -1250 }, 800, function (){
-                $('.suggest-wrapper .suggest-slide:first').appendTo('.suggest-wrapper');
-            $('.suggest-wrapper').css({ marginLeft: 0 });
-            }); 
+            if(currentPage < totalPage -1){
+                currentPage++;
+                $('.suggest-wrapper').stop().animate({
+                    marginLeft: `-${pageWidth * currentPage}px`
+                }, 800);
+            }
         });
+
     } catch (error) {
         console.log('에러발생(구매 많이 된 상품)', error);
     }

@@ -378,22 +378,20 @@ header .main-menu {
 
 #contents {
   max-width: 1912px;
-  height: 4950px;
+  height: auto;
   margin: 0 auto;
 }
 #contents .bookDetail_wrap {
   width: 1280px;
-  height: 100%;
-  margin: 0 auto;
-  background-color: lightgoldenrodyellow;
+  height: 624px;
+  margin: 60px auto;
 }
 #contents .bookDetail_wrap .detail {
   width: 1252px;
   height: 624px;
-  margin: 60px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
 }
 #contents .bookDetail_wrap .detail .bigImgBox {
   width: 642px;
@@ -484,6 +482,7 @@ header .main-menu {
   height: 28px;
   border: none;
   text-align: center;
+  cursor: default;
   border-right: 1px solid #e5e5e5;
   border-left: 1px solid #e5e5e5;
   font-weight: 500;
@@ -500,10 +499,9 @@ header .main-menu {
   padding: 15px;
   display: flex;
   align-items: center;
-  background-color: #fff;
   border: 1px solid #e5e5e5;
 }
-#contents .bookDetail_wrap .detail .detail_font .dm span {
+#contents .bookDetail_wrap .detail .detail_font .dm .dmpan1 {
   width: 42px;
   height: 42px;
   padding: 0;
@@ -513,8 +511,9 @@ header .main-menu {
   justify-content: center;
   background-color: #aaa;
   border-radius: 50%;
+  cursor: default;
 }
-#contents .bookDetail_wrap .detail .detail_font .dm span .fi-ts-shipping-fast {
+#contents .bookDetail_wrap .detail .detail_font .dm .dmpan1 .fi-ts-shipping-fast {
   font-size: 20px;
   line-height: 0px;
   color: #fff;
@@ -523,7 +522,13 @@ header .main-menu {
   font-size: 13px;
 }
 #contents .bookDetail_wrap .detail .detail_font .dm p b {
-  font-weight: 500;
+  font-weight: 600;
+}
+#contents .bookDetail_wrap .detail .detail_font .dm p .dmpan2 {
+  color: #18a9f1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
 }
 #contents .bookDetail_wrap .detail .detail_font .dm2 {
   width: 100%;
@@ -548,11 +553,13 @@ header .main-menu {
 #contents .bookDetail_wrap .detail .detail_font .dm3 p span {
   font-size: 20px;
   font-weight: 700;
+  cursor: default;
 }
 #contents .bookDetail_wrap .detail .detail_font .dm3 p .dm3span {
   font-size: 14px;
   font-weight: 500;
   color: #7d7d7d;
+  cursor: default;
 }
 #contents .bookDetail_wrap .detail .detail_font .dmBtn {
   text-align: right;
@@ -565,9 +572,9 @@ header .main-menu {
   font-size: 17px;
   font-weight: 500;
   text-align: center;
-  background-color: #fff;
   border: 1px solid #c7c7c7;
   border-radius: 8px;
+  background-color: #fff;
   cursor: pointer;
 }
 #contents .bookDetail_wrap .detail .detail_font .dmBtn .dmBtn1:hover {
@@ -588,38 +595,47 @@ header .main-menu {
   border-radius: 8px;
   cursor: pointer;
 }
-#contents .bookDetail_wrap .suggest {
-  width: 1252px;
+#contents .suggest {
+  width: 1280px;
   height: 300px;
   margin: 0 auto;
   position: relative;
-  background-color: #fff;
 }
-#contents .bookDetail_wrap .suggest p {
+#contents .suggest:hover .suggest-prevBox,
+#contents .suggest:hover .suggest-nextBox {
+  opacity: 1;
+  pointer-events: auto;
+}
+#contents .suggest p {
   font-family: "S-CoreDream-3Light";
   font-weight: 900;
+  padding-left: 20px;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper {
+#contents .suggest .suggest-swiper {
   width: 1252px;
   height: 100%;
   overflow: hidden;
+  margin: 0 auto;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper {
+#contents .suggest .suggest-swiper .suggest-wrapper {
   width: 5500px;
   height: 100%;
   display: flex;
   align-items: center;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper .suggest-slide {
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide {
   width: 160px;
   height: 230px;
-  margin-right: 20px;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper .suggest-slide .suggest-imgBox {
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide:hover .suggest-imgBox img {
+  transform: scale(1.05);
+}
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide .suggest-imgBox {
   width: 100%;
   height: 160px;
   display: flex;
@@ -627,11 +643,12 @@ header .main-menu {
   align-items: center;
   background-color: #fafafa;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper .suggest-slide .suggest-imgBox img {
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide .suggest-imgBox img {
   width: 85px;
   height: auto;
+  transition: transform 0.3s ease;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper .suggest-slide p {
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide p {
   font-family: "Noto Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -642,14 +659,14 @@ header .main-menu {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#contents .bookDetail_wrap .suggest .suggest-swiper .suggest-wrapper .suggest-slide h6 {
+#contents .suggest .suggest-swiper .suggest-wrapper .suggest-slide h6 {
   padding: 0 10px;
   font-size: 13px;
   font-weight: 500;
   color: #18a9f1;
 }
-#contents .bookDetail_wrap .suggest .suggest-prevBox,
-#contents .bookDetail_wrap .suggest .suggest-nextBox {
+#contents .suggest .suggest-prevBox,
+#contents .suggest .suggest-nextBox {
   width: 40px;
   height: 40px;
   display: flex;
@@ -661,15 +678,40 @@ header .main-menu {
   border: 1px solid #eee;
   border-radius: 50%;
   box-shadow: 0 0 6px rgba(226, 226, 226, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  cursor: pointer;
 }
-#contents .bookDetail_wrap .suggest .suggest-prevBox .suggest-prev,
-#contents .bookDetail_wrap .suggest .suggest-prevBox .suggest-next,
-#contents .bookDetail_wrap .suggest .suggest-nextBox .suggest-prev,
-#contents .bookDetail_wrap .suggest .suggest-nextBox .suggest-next {
+#contents .suggest .suggest-prevBox .suggest-prev,
+#contents .suggest .suggest-prevBox .suggest-next,
+#contents .suggest .suggest-nextBox .suggest-prev,
+#contents .suggest .suggest-nextBox .suggest-next {
   font-size: 20px;
   color: #a3a3a3;
   line-height: 0;
 }
-#contents .bookDetail_wrap .suggest .suggest-nextBox {
+#contents .suggest .suggest-nextBox {
   right: 0;
+}
+#contents .inner-menu {
+  width: 1280px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+#contents .inner-menu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#contents .inner-menu ul li {
+  width: 313px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 }
