@@ -134,6 +134,10 @@ swiper.on('slideChangeTransitionEnd', () => {
   });
 });
 
+function goToDetailPage(){
+   window.location.href = 'sub.html';
+}
+
 // 신착 도서 슬라이더
 newprev = () => {
   $('.new-wrapper .new-slide:last').prependTo('.new-wrapper');
