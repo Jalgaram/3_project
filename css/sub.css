@@ -378,7 +378,6 @@ header .main-menu {
 
 #contents {
   max-width: 1912px;
-  height: auto;
   margin: 0 auto;
 }
 #contents .bookDetail_wrap {
@@ -442,7 +441,7 @@ header .main-menu {
   right: 10%;
 }
 #contents .bookDetail_wrap .detail .detail_font hr {
-  border-top: 1px solid #ddd;
+  border: 1px solid #e5e5e5;
 }
 #contents .bookDetail_wrap .detail .detail_font table tr {
   text-align: left;
@@ -711,7 +710,118 @@ header .main-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 18px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
+}
+#contents .inner-menu1 {
+  width: 1280px;
+  margin: 0 auto;
+}
+#contents .inner-menu1 hr {
+  border: 1px solid #e5e5e5;
+}
+#contents .inner-menu1 h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #18a9f1;
+}
+#contents .inner-menu1 .inner-txt1 {
+  margin: 30px 0;
+}
+#contents .inner-menu1 .inner-txt1 table {
+  margin-top: 20px;
+  border: 1px solid #a3a3a3;
+  border-collapse: collapse;
+}
+#contents .inner-menu1 .inner-txt1 table th, #contents .inner-menu1 .inner-txt1 table td {
+  border: 1px solid #a3a3a3;
+}
+#contents .inner-menu1 .inner-txt1 table th {
+  width: 200px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f3f3f3;
+}
+#contents .inner-menu1 .inner-txt1 table td {
+  width: 300px;
+  height: 35px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+#contents .inner-menu1 .inner-txt2 {
+  margin: 30px 0;
+}
+#contents .inner-menu1 .inner-txt2 h5 {
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+#contents .inner-menu1 .inner-txt2 p {
+  color: #555;
+  font-size: 15px;
+  margin: 10px 0;
+}
+#contents .inner-menu1 .inner-txt3 {
+  margin: 30px 0;
+}
+#contents .inner-menu1 .inner-txt3 p {
+  margin: 20px 0;
+  color: #555;
+  font-size: 15px;
+}
+#contents .inner-menu1 .inner-txt3 p span {
+  font-weight: 500;
+}
+#contents .inner-menu1 .inner-txt3 li {
+  color: #555;
+  font-size: 15px;
+}
+#contents .inner-menu1 .inner-txt3 li span {
+  font-weight: 500;
+}
+#contents .inner-menu1 .inner-txt4 {
+  margin: 30px 0;
+}
+#contents .inner-menu1 .inner-txt4 div {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+#contents .inner-menu1 .inner-txt5 {
+  margin-top: 30px;
+  margin-bottom: 5%;
+}
+#contents .inner-menu1 .inner-txt5 .person1,
+#contents .inner-menu1 .inner-txt5 .person2,
+#contents .inner-menu1 .inner-txt5 .person3 {
+  border: 2px solid #e5e5e5;
+}
+#contents .inner-menu1 .inner-txt5 .person1 h4,
+#contents .inner-menu1 .inner-txt5 .person2 h4,
+#contents .inner-menu1 .inner-txt5 .person3 h4 {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f3f3f3;
+  border-bottom: 2px solid #e5e5e5;
+}
+#contents .inner-menu1 .inner-txt5 .person1 p,
+#contents .inner-menu1 .inner-txt5 .person2 p,
+#contents .inner-menu1 .inner-txt5 .person3 p {
+  padding: 20px 10px;
+  font-size: 15px;
+}
+#contents .inner-menu1 .inner-txt5 .person1 {
+  margin-top: 20px;
+  border-bottom: none;
+}
+#contents .inner-menu1 .inner-txt5 .person2 {
+  border-bottom: none;
+}
+#contents .inner-menu2 {
+  width: 1280px;
+  margin: 0 auto;
 }

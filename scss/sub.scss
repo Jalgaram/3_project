@@ -37,7 +37,6 @@ header {
 // 컨텐츠
 #contents {
     @include full-width;
-    height: auto;
     @include margin-auto;
 
     .bookDetail_wrap {
@@ -114,9 +113,7 @@ header {
                 }
 
                 hr {
-                    border: {
-                        top: 1px solid #ddd;
-                    }
+                    border: 1px solid #e5e5e5;
                 }
 
                 table {
@@ -160,7 +157,7 @@ header {
                             border: 1px solid #e5e5e5;
                             border-radius: 8px;
                             background-color: #fff;
-                        
+
                             input {
                                 width: 45px;
                                 height: 28px;
@@ -195,7 +192,7 @@ header {
                     display: flex;
                     align-items: center;
                     border: 1px solid #e5e5e5;
- 
+
                     .dmpan1 {
                         width: 42px;
                         height: 42px;
@@ -221,12 +218,15 @@ header {
                         b {
                             font-weight: 600;
                         }
-                        .dmpan2{
+
+                        .dmpan2 {
                             color: #18a9f1;
+
                             font: {
                                 size: 13px;
                                 weight: 600;
                             }
+
                             cursor: default;
                         }
                     }
@@ -261,6 +261,7 @@ header {
                                 size: 20px;
                                 weight: 700;
                             }
+
                             cursor: default;
                         }
 
@@ -269,6 +270,7 @@ header {
                                 size: 14px;
                                 weight: 500;
                             }
+
                             color: #7d7d7d;
                             cursor: default;
                         }
@@ -330,7 +332,9 @@ header {
         height: 300px;
         @include margin-auto;
         position: relative;
+
         &:hover {
+
             .suggest-prevBox,
             .suggest-nextBox {
                 opacity: 1;
@@ -343,6 +347,7 @@ header {
                 family: 'S-CoreDream-3Light';
                 weight: 900;
             }
+
             padding-left: 20px;
 
         }
@@ -367,8 +372,9 @@ header {
                     flex-direction: column;
                     justify-content: space-between;
                     @include cursor-pointer;
-                    &:hover{
-                        .suggest-imgBox img{
+
+                    &:hover {
+                        .suggest-imgBox img {
                             transform: scale(1.05);
                         }
                     }
@@ -443,32 +449,171 @@ header {
                 line-height: 0;
             }
         }
-        .suggest-nextBox{
-                right: 0;
+
+        .suggest-nextBox {
+            right: 0;
         }
     }
 
-    .inner-menu{
+    .inner-menu {
         @include content-width;
         height: 70px;
         @include margin-auto;
         margin-top: 60px;
 
-        ul{
+        ul {
             width: 100%;
             height: 100%;
             display: flex;
-            
-            li{
+
+            li {
                 width: 313px;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 17px;
-                border-bottom: 1px solid #e5e5e5;;
+                font-size: 18px;
+                border-bottom: 1px solid #e5e5e5;
                 @include cursor-pointer;
             }
         }
+    }
+
+    .inner-menu1 {
+        @include content-width;
+        @include margin-auto;
+
+        hr{
+            border: 1px solid #e5e5e5;
+        }
+
+        h3 {
+            font: {
+                size: 18px;
+                weight: 700;
+            }
+
+            color: #18a9f1;
+        }
+
+        .inner-txt1 {
+            margin: 30px 0;
+
+            table {
+                margin-top: 20px;
+                border: 1px solid #a3a3a3;
+                border-collapse: collapse;
+
+                th,td{
+                    border: 1px solid #a3a3a3;
+                }
+
+                th{
+                    width: 200px;
+                    height: 35px;
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                    background-color: #f3f3f3;
+                }
+                td{
+                    width: 300px;
+                    height: 35px;
+                    padding-left: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .inner-txt2{
+            margin: 30px 0;
+
+            h5{
+                margin: 20px 0;
+                font: {
+                    size: 15px;
+                    weight: 500;
+                }
+                color: #333;
+            }
+
+            p{
+                color: #555;
+                font-size: 15px;
+                margin: 10px 0;
+            }
+        }
+
+        .inner-txt3{
+            margin: 30px 0;
+
+            p{
+                margin: 20px 0;
+                color: #555;
+                font-size: 15px;
+                span{
+                    font-weight: 500;
+                }
+            }
+
+            li{
+                color: #555;
+                font-size: 15px;
+                
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .inner-txt4{
+            margin: 30px 0;
+
+            div{
+                margin: 20px 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .inner-txt5{
+            margin-top: 30px;
+            margin-bottom: 5%;
+
+            .person1,
+            .person2,
+            .person3{
+                border: 2px solid #e5e5e5;
+
+                h4{
+                    padding: 10px;
+                    font: {
+                        size: 16px;
+                        weight: 500;
+                    }
+                    background-color: #f3f3f3;
+                    border-bottom: 2px solid #e5e5e5;;
+                }
+
+                p{
+                    padding: 20px 10px;  
+                    font-size: 15px;
+                }
+            }
+
+            .person1{
+                margin-top: 20px;
+                border-bottom: none;
+            }
+            .person2{
+                border-bottom: none;
+            }
+        }
+    }
+
+    .inner-menu2{
+        @include content-width;
+        @include margin-auto;
     }
 }
