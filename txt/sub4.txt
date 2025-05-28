@@ -1,0 +1,13 @@
+<div class="qa-title">
+	<h2>Q&A</h2>
+</div>
+
+<div class="qa-content">
+	<p>게시물이 없습니다.</p>
+</div>
+
+<div class="qa-btns">
+	<button class="qa-btn1">전체보기</button>
+	<button class="qa-btn2">상품문의하기</button>
+</div>
+

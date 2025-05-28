@@ -1,6 +1,6 @@
 $('.inner-menu ul li').eq(0).css({
-     'font-weight': '500',
-        'border-bottom': '2px solid black'
+    'font-weight': '500',
+    'border-bottom': '2px solid black'
 });
 
 $('.inner-menu ul li').click(function () {
@@ -28,6 +28,14 @@ $(function () {
 
     $.get("./txt/sub2.txt", function (data) {
         $('.inner-menu2').html(data);
+    })
+
+    $.get("./txt/sub3.txt", function (data) {
+        $('.inner-menu3').html(data);
+    })
+
+    $.get("./txt/sub4.txt", function (data) {
+        $('.inner-menu4').html(data);
     })
 
 });

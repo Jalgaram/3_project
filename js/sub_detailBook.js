@@ -31,10 +31,6 @@ async function detailBookData() {
             for (let j = 0; j < Math.min(2, data.documents.length); j++) {
 
                 const boxHTML = `
-                     <div class="bigImgBox">
-                        <img src = "./img/푸바오.jpeg">
-                     </div>
-
                      <div class= "detail_font">
                         <h3>${data.documents[j].title}</h3>
                         <span>
@@ -153,3 +149,10 @@ function updateTotal($context, count){
         $context.find('.dm3 span').first().text(`${totalPrice.toLocaleString()}원`);
         $context.find('.dm3span').text(`(${count}개)`);
 }
+
+// 회전
+const box = document.querySelector('.hoverBox');
+
+box.addEventListener('click', () => {
+    box.classList.toggle('rotate');
+});
