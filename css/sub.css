@@ -452,11 +452,11 @@ header .main-menu {
 }
 #contents .bookDetail_wrap .detail .bigImgBox .hoverBox:hover {
   transform: rotateY(35deg);
-  cursor: url(/3_PROJECT/img/ico_flip.svg), pointer !important;
+  cursor: url(../img/ico_flip.svg), pointer !important;
 }
 #contents .bookDetail_wrap .detail .bigImgBox .hoverBox.rotate {
   transform: rotateY(180deg);
-  cursor: url(/3_PROJECT/img/ico_flip.svg), pointer !important;
+  cursor: url(../img/ico_flip.svg), pointer !important;
 }
 #contents .bookDetail_wrap .detail .detail_font {
   width: 510px;

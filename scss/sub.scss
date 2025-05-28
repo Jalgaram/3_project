@@ -114,13 +114,13 @@ header {
             
                     &:hover {
                         transform: rotateY(35deg);
-                        cursor: url(/3_PROJECT/img/ico_flip.svg),
+                        cursor: url(../img/ico_flip.svg),
                         pointer !important;
                     }
             
                     &.rotate {
                         transform: rotateY(180deg);
-                        cursor: url(/3_PROJECT/img/ico_flip.svg),
+                        cursor: url(../img/ico_flip.svg),
                         pointer !important;
                     }
                 }
