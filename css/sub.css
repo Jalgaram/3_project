@@ -456,7 +456,7 @@ header .main-menu {
 }
 #contents .bookDetail_wrap .detail .bigImgBox .hoverBox.rotate {
   transform: rotateY(180deg);
-  cursor: url(/img/ico_flip.svg), pointer !important;
+  cursor: url(../img/ico_flip.svg), pointer !important;
 }
 #contents .bookDetail_wrap .detail .detail_font {
   width: 510px;
@@ -614,11 +614,12 @@ header .main-menu {
   cursor: default;
 }
 #contents .bookDetail_wrap .detail .detail_font .dmBtn {
-  text-align: right;
+  width: 100%;
   height: 58px;
+  text-align: right;
 }
 #contents .bookDetail_wrap .detail .detail_font .dmBtn .dmBtn1 {
-  width: 219px;
+  width: 220px;
   height: 100%;
   color: #555;
   font-size: 17px;
@@ -636,8 +637,9 @@ header .main-menu {
   font-size: 15px;
 }
 #contents .bookDetail_wrap .detail .detail_font .dmBtn .dmBtn2 {
-  width: 284px;
+  width: 275.8px;
   height: 100%;
+  margin-left: 10px;
   font-size: 17px;
   font-weight: 500;
   text-align: center;
