@@ -1,4 +1,4 @@
-<h2>상품구매안내</h2>
+<h2 id="menu2-txt1">상품구매안내</h2>
 
 <div class="menu2-txt1">
 	<h3>상품결제정보</h3>

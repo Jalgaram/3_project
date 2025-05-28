@@ -20,6 +20,18 @@ $('.inner-menu ul li').click(function () {
     $('.inner-menu' + (index + 1)).show();
 });
 
+// 메뉴 고정
+const innerMenu = document.querySelector('.inner-menu__wrapper');
+const menuOffsetTop = innerMenu.offsetTop;
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY >= menuOffsetTop){
+        innerMenu.classList.add('fixed');
+    } else {
+        innerMenu.classList.remove('fixed');
+    }
+});
+
 // 제품상세 등등등
 $(function () {
     $.get("./txt/sub.txt", function (data) {

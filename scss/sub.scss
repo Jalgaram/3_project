@@ -82,8 +82,7 @@ header {
                         background-size: cover;
                         background-position: center;
                         transform-origin: left;
-                        transform: rotateY(90deg);
-                                   
+                        transform: rotateY(90deg);           
                     }
             
                     img {
@@ -524,22 +523,46 @@ header {
         @include margin-auto;
         margin-top: 60px;
 
-        ul {
-            width: 100%;
+        .inner-menu__wrapper {
+            @include content-width;
+            @include margin-auto;
             height: 100%;
-            display: flex;
+            position: relative;
 
-            li {
-                width: 313px;
+            &.fixed{
+                width: 1280px;
+                height: 70px;
+                position: fixed;
+                top: 0;
+                margin: 0 auto;
+                z-index: 999;
+                background-color: #fff;
+            }
+
+            ul {
+                width: 100%;
                 height: 100%;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 18px;
-                border-bottom: 1px solid #e5e5e5;
-                @include cursor-pointer;
+
+                li {
+                    width: 320px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 18px;
+                    border-bottom: 1px solid #e5e5e5;
+                    @include cursor-pointer;
+
+                    a{
+                        color: #000;
+                        text-decoration: none
+                    }
+                }
             }
         }
+
+       
     }
 
     .inner-menu1 {

@@ -1,4 +1,4 @@
-<div class="inner-txt1">
+<div id="inner-txt1" class="inner-txt1">
 	<h3>품목정보</h3>
 
 	<table>
