@@ -156,3 +156,10 @@ const box = document.querySelector('.hoverBox');
 box.addEventListener('click', () => {
     box.classList.toggle('rotate');
 });
+
+// 하트 클릭시 변하기
+$(document).on('click', '.fi-rs-heart', function(){
+    $(this)
+        .removeClass('fi-rs-heart')
+        .addClass('fi-ss-heart');
+});
