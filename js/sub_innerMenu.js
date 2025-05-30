@@ -1,6 +1,11 @@
-$('.inner-menu ul li').eq(0).css({
-    'font-weight': '500',
-    'border-bottom': '2px solid black'
+$(document).ready(function () {
+    
+    $('.inner-menu2, .inner-menu3, .inner-menu4').hide();
+
+    $('.inner-menu ul li').eq(0).css({
+        'font-weight': '500',
+        'border-bottom': '2px solid black'
+    });
 });
 
 $('.inner-menu ul li').click(function () {
